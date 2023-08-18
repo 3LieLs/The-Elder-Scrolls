@@ -1,0 +1,113 @@
+/*----------------------------------------GERAL----------------------------------------*/
+body {
+    background-color: rgb(80, 80, 80);
+}
+main {
+    background-color: orangered;
+    margin: auto;
+    border: solid 5px black;
+    border-radius: 10%;
+    width: 1000px;
+    height: 550px;
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------INICIO----------------------------------------*/
+#mensagemInicio {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#botaoInicio {
+    background-color: black;
+    color: orangered;
+    font-size: 60pt;
+    border: solid;
+    border-radius: 20%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    height: 200px;
+}
+@keyframes botaoAnimacao {
+    0% {transform: scale(1.0)}
+    0% {background-color: black;}
+    50% {transform: scale(1.1)}
+    50% {background-color: gray;}
+    100% {background-color: black;}
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------SELEÇÃO DE GÊNERO----------------------------------------*/
+#mensagemSelecao {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#botaoSelecao_M {
+    background-color: black;
+    color: orangered;
+    font-size: 25pt;
+    border: solid;
+    border-radius: 20%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+}
+#botaoSelecao_F {
+    background-color: black;
+    color: orangered;
+    font-size: 25pt;
+    border: solid;
+    border-radius: 20%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------SELEÇÃO DE NOME----------------------------------------*/
+#mensagemUsuario {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#nomeUsuario{
+    background-color: black;
+    color: orangered;
+    border: solid 5px gray;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 50pt;
+    width: 500px;
+    height: 100px;
+}
+#enviarUsuario{
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+@keyframes botaoAnimacaoUsuario {
+    0% {background-color: black;}
+    50% {background-color: gray;}
+    100% {background-color: black;}
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+

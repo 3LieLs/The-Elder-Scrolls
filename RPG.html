@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elder Scrolls</title>
+    <link rel="stylesheet" href="assets/Inicio_Selecao_Usuario_Style.css">
+    <link rel="stylesheet" href="assets/classe_arma_armadura_Style.css">
+</head>
+
+<body>
+    <main>
+        <!----------------------INICIO---------------------->
+        <div id="inicio">
+            <p id="mensagemInicio">Bem vindo ao meu projeto</p>
+            <input id="botaoInicio" type="button" value="Iniciar">
+            <p id="mestre"></p>
+        </div>
+        <!---------------------------------------------------------------------->
+        <!----------------------SELEÇÃO DE GÊNERO---------------------->
+        <div id="selecao">
+            <p id="mensagemSelecao">Selecione o seu gênero</p>
+            <input id="botaoSelecao_M" type="button" value="Masculino">
+            <input id="botaoSelecao_F" type="button" value="Feminino">
+        </div>
+        <!---------------------------------------------------------------------->
+        <!----------------------SELEÇÃO DE NOME---------------------->
+        <div id="usuario">
+            <p id="mensagemUsuario">Selecione o seu nome</p>
+            <input id="nomeUsuario" name="nomeUsuario" type="text">
+            <input id="enviarUsuario" type="submit" value="Enviar" onclick="transform()">
+        </div>
+        <!---------------------------------------------------------------------->
+        <!----------------------ESCOLHA DOS ITENS---------------------->
+        <div id="classe">
+            <p id="mensagemClasse"></p>
+            <div id="mainClasse">
+                <div id="guerreiroBarra">
+                    <input id="guerreiro" type="button" value="Guerreiro">
+                    <p id="guerreiroStats">Vida = 20<br>Mana = 10<br>Energia = 15</p>
+                </div>
+                <div id="magoBarra">
+                    <input id="mago" type="button" value="Mago">
+                    <p id="magoStats">Vida = 15<br>Mana = 20<br>Energia = 10</p>
+                </div>
+                <div id="arqueiroBarra">
+                    <input id="arqueiro" type="button" value="Arqueiro">
+                    <p id="arqueiroStats">Vida = 15<br>Mana = 10<br>Energia = 20</p>
+                </div>
+            </div>
+
+        </div>
+        <!---------------------------------------------------------------------->
+    </main>
+
+
+    <script src="assets/Inicio_Selecao_Usuario_Script.js"></script>
+    <script src="assets/classe_arma_armadura_Script.js"></script>
+</body>
+
+</html>

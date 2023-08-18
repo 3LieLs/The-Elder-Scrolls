@@ -1,0 +1,91 @@
+/*----------------------------------------SELEÇÃO DE CLASSE----------------------------------------*/
+
+#mensagemClasse{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#mainClasse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+#guerreiroBarra{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 0;
+    width: 300px;
+}
+#guerreiro{
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+#guerreiroStats{
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    font-size: 20pt;
+    width: 300px;
+    height: 120px;
+}
+
+#magoBarra{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 10px;
+    width: 300px;
+}
+#mago{
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+#magoStats{
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    font-size: 20pt;
+    width: 300px;
+    height: 120px;
+}
+
+#arqueiroBarra{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+#arqueiro{
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px; 
+}
+#arqueiroStats{
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    font-size: 20pt;
+    width: 300px;
+    height: 120px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
