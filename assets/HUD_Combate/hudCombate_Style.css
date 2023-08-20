@@ -1,0 +1,113 @@
+#mensagemLegenda{
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    width: 400px;
+    margin: 0px;
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#estatistica {
+    display:flex ;
+    flex-direction: column;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    margin: 0px 0px 0px 0px;
+    width: 130px;
+}
+
+#estatisticaVida {
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: red;
+    color: white;
+    margin: 0px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+#estatisticaEnergia {
+    text-align: center;
+    font-size: 15pt;
+    background-color: green;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+#estatisticaMana {
+    text-align: center;
+    font-size: 15pt;
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+
+#golem{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#golemNome{
+    text-align: center;
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50pt;
+    margin: 0px;
+    padding: 0px;
+    width: 500px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemVida{
+    text-align: center;
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemEnergia{
+    text-align: center;
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemMana{
+    text-align: center;
+    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    border: solid 3px black;
+    border-radius: 25%;
+}

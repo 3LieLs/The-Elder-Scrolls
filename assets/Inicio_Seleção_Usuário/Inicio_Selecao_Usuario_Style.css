@@ -3,12 +3,13 @@ body {
     background-color: rgb(80, 80, 80);
 }
 main {
+    position: relative;
     background-color: orangered;
     margin: auto;
     border: solid 5px black;
     border-radius: 10%;
-    width: 1000px;
-    height: 550px;
+    width: 90%;
+    height: 610px;
 }
 /*----------------------------------------------------------------------------------------------------*/
 

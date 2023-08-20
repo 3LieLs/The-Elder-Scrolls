@@ -1,7 +1,22 @@
+/*----------------------------------------VARIÁVEIS----------------------------------------*/
+
+var vidaVal = 0, manaVal = 0, manaCustoVal, manaRecuperacaoVal, energiaVal = 0, energiaCustoVal, energiaRecuperacaoVal
+var danoVal, defesaVal, classeVal, armaVal, armaduraVal
+var nomeUsuarioVal, generoVal
+var faseGolem = false, faseDragao = false, vezUsuario = true
+
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------DISPLAY----------------------------------------*/
+
+inicio.style.display = 'contents', selecao.style.display = 'none', usuario.style.display = 'none' 
+classe.style.display = 'none', arma.style.display = 'none', armadura.style.display = 'none' 
+mainHud.style.display = 'none', tutorial.style.display = 'none', mainFaseGolem.style.display = 'none'
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+
 /*----------------------------------------INICIO----------------------------------------*/
-selecao.style.display = 'none'
-usuario.style.display = 'none'
-classe.style.display = 'none'
 
 var botaoInicioVal = window.document.querySelector('input#botaoInicio')
 botaoInicioVal.addEventListener('click', botaoInicioClick)
@@ -13,7 +28,8 @@ function botaoInicioClick() {
     selecao.style.display = 'contents'
 }
 function botaoInicioHover() {
-    botaoInicioVal.style.animation = 'botaoAnimacao 3s 0ms infinite running'//começa a animação
+    botaoInicioVal.style.cursor = 'pointer'
+    botaoInicioVal.style.animation = 'botaoAnimacao 2s 0ms infinite running'//começa a animação
     botaoInicioVal.style.background = 'gray'
 }
 function botaoInicioOut() {
@@ -25,7 +41,6 @@ function botaoInicioOut() {
 /*----------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------SELEÇÃO DE GÊNERO----------------------------------------*/
-var H_M = 0
 
 var botaoSelecaoVal_M = window.document.querySelector('input#botaoSelecao_M')
 botaoSelecaoVal_M.addEventListener('click', botaoSelecaoClick_M)
@@ -33,14 +48,14 @@ botaoSelecaoVal_M.addEventListener('mouseover', botaoSelecaoHover_M) //Serve par
 botaoSelecaoVal_M.addEventListener('mouseout', botaoSelecaoOut_M)
 
 function botaoSelecaoClick_M() {
-    H_M = 1
+    generoVal = 'Homem'
     selecao.style.display = 'none'
     usuario.style.display = 'contents'
 }
 function botaoSelecaoHover_M() {
-    botaoSelecaoVal_M.style.animation = 'botaoAnimacao_M 1s 0ms infinite running'//começa a animação
+    botaoSelecaoVal_M.style.cursor = 'pointer'
     botaoSelecaoVal_M.style.background = 'blue'
-    botaoSelecaoVal_M.style.transition = '2s'
+    botaoSelecaoVal_M.style.transition = '0.5s'
 }
 function botaoSelecaoOut_M() {
     botaoSelecaoVal_M.style.background = 'black'
@@ -52,14 +67,14 @@ botaoSelecaoVal_F.addEventListener('mouseover', botaoSelecaoHover_F) //Serve par
 botaoSelecaoVal_F.addEventListener('mouseout', botaoSelecaoOut_F)
 
 function botaoSelecaoClick_F() {
-    H_M = 2
+    generoVal = 'Mulher'
     selecao.style.display = 'none'
     usuario.style.display = 'contents'
 }
 function botaoSelecaoHover_F() {
-    botaoSelecaoVal_F.style.animation = 'botaoAnimacao_F 1s 0ms infinite running'//começa a animação
-    botaoSelecaoVal_F.style.background = 'pink'
-    botaoSelecaoVal_F.style.transition = '2s'
+    botaoSelecaoVal_F.style.cursor = 'pointer'
+    botaoSelecaoVal_F.style.background = '#F005D0'
+    botaoSelecaoVal_F.style.transition = '0.5s'
 }
 function botaoSelecaoOut_F() {
     botaoSelecaoVal_F.style.background = 'black'
@@ -79,6 +94,7 @@ function enviarUsuarioClick() {
     classe.style.display = 'contents'
 }
 function enviarUsuarioHover() {
+    enviarUsuarioVal.style.cursor = 'pointer'
     enviarUsuarioVal.style.animation = 'botaoAnimacao 2s 0ms infinite running'//começa a animação
     enviarUsuarioVal.style.background = 'gray'
 }

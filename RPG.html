@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Elder Scrolls</title>
-    <link rel="stylesheet" href="assets/Inicio_Selecao_Usuario_Style.css">
-    <link rel="stylesheet" href="assets/classe_arma_armadura_Style.css">
+    <link rel="stylesheet" href="assets/Inicio_Seleção_Usuário/Inicio_Selecao_Usuario_Style.css">
+    <link rel="stylesheet" href="assets/Classe_Arma_Armadura/classe_arma_armadura_Style.css">
+    <link rel="stylesheet" href="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Style.css">
+    <link rel="stylesheet" href="assets/HUD_Combate/hudCombate_Style.css">
+    <link rel="stylesheet" href="assets/Tutorial_História/tutorial_historia_Style.css">
 </head>
 
 <body>
@@ -29,34 +32,129 @@
         <div id="usuario">
             <p id="mensagemUsuario">Selecione o seu nome</p>
             <input id="nomeUsuario" name="nomeUsuario" type="text">
-            <input id="enviarUsuario" type="submit" value="Enviar" onclick="transform()">
+            <input id="enviarUsuario" type="submit" value="Enviar" onclick="Classe()">
         </div>
         <!---------------------------------------------------------------------->
-        <!----------------------ESCOLHA DOS ITENS---------------------->
+        <!----------------------ESCOLHA DA CLASSE---------------------->
         <div id="classe">
             <p id="mensagemClasse"></p>
             <div id="mainClasse">
                 <div id="guerreiroBarra">
-                    <input id="guerreiro" type="button" value="Guerreiro">
-                    <p id="guerreiroStats">Vida = 20<br>Mana = 10<br>Energia = 15</p>
+                    <input id="guerreiro" type="button" value="Guerreiro" onclick="botaoClasseGuerreiroClick()">
+                    <p id="caracteristicaGuerreiro">O Guerreiro sabe usar todos os tipos de armas simples. Sendo de sua
+                        preferência o uso de armas corpo a corpo como martelos de guerra, espadas longas, de duas mãos
+                        ou espadas bastardas.</p>
+                    <p id="guerreiroStats">Status: Vida = 20 / Mana = 10 / Energia = 15</p>
                 </div>
                 <div id="magoBarra">
                     <input id="mago" type="button" value="Mago">
-                    <p id="magoStats">Vida = 15<br>Mana = 20<br>Energia = 10</p>
+                    <p id="caracteristicaMago">Muitos mágicos não precisam de nenhum material; aqueles que o fazem podem
+                        exigir apenas materiais simples e facilmente obtidos. Varinhas e cajados há muito tempo são
+                        usados como requisitos para o mago.</p>
+                    <p id="magoStats">Status: Vida = 15 / Mana = 20 / Energia = 10</p>
                 </div>
                 <div id="arqueiroBarra">
                     <input id="arqueiro" type="button" value="Arqueiro">
-                    <p id="arqueiroStats">Vida = 15<br>Mana = 10<br>Energia = 20</p>
+                    <p id="caracteristicaArqueiro">Arqueiros são os usuários de Arco e Flecha, um conjunto de arma de
+                        longo alcance. Esse conjunto também forma outros tipos de armas com os mesmos conceitos, como a
+                        Besta e a Balista</p>
+                    <p id="arqueiroStats">Status: Vida = 15 / Mana = 10 / Energia = 20</p>
                 </div>
             </div>
-
         </div>
         <!---------------------------------------------------------------------->
+        <!----------------------ESCOLHA DA ARMA---------------------->
+        <div id="arma">
+            <p id="mensagemArma"></p>
+            <div id="mainArma">
+                <div id="arma1Barra">
+                    <input id="arma1" type="button" value="teste1">
+                    <p id="caracteristicaArma1"></p>
+                    <p id="statsArma1"></p>
+                </div>
+                <div id="arma2Barra">
+                    <input id="arma2" type="button" value="teste2">
+                    <p id="caracteristicaArma2"></p>
+                    <p id="statsArma2"></p>
+                </div>
+                <div id="arma3Barra">
+                    <input id="arma3" type="button" value="teste3">
+                    <p id="caracteristicaArma3"></p>
+                    <p id="statsArma3"></p>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------->
+        <!----------------------ESCOLHA DA ARMADURA---------------------->
+        <div id="armadura">
+            <p id="mensagemArmadura"></p>
+            <div id="mainArmadura">
+                <div id="armadura1Barra">
+                    <input id="armadura1" type="button" value="teste1">
+                    <p id="caracteristicaArmadura1"></p>
+                    <p id="statsArmadura1"></p>
+                </div>
+                <div id="armadura2Barra">
+                    <input id="armadura2" type="button" value="teste2">
+                    <p id="caracteristicaArmadura2"></p>
+                    <p id="statsArmadura2"></p>
+                </div>
+                <div id="armadura3Barra">
+                    <input id="armadura3" type="button" value="teste3">
+                    <p id="caracteristicaArmadura3"></p>
+                    <p id="statsArmadura3"></p>
+                </div>
+            </div>
+        </div>
+        <!----------------------TUTORIAL---------------------->
+        <!---------------------------------------------------------------------->
+        <div id="mainFaseGolem">
+            <div id="golem">
+                <p id="golemNome">GOLEM</p>
+                <p id="golemVida"></p>
+                <p id="golemEnergia"></p>
+                <p id="golemMana"></p>
+            </div>
+        </div>
+        <div id="mainHud">
+            <div id="legenda">
+                <p id="mensagemLegenda"></p>
+            </div>
+            <div id="estatistica">
+                <p id="estatisticaVida"></p>
+                <p id="estatisticaEnergia"></p>
+                <p id="estatisticaMana"></p>
+            </div>
+            <div id="acao">
+                <input id="ataqueA" type="button" value="Ataque Básico" onclick="botaoAtaqueAClick()"
+                    onmouseover="botaoAtaqueAHover()" onmouseout="botaoAtaqueAOut()">
+
+                <input id="ataqueB" type="button" value="Ataque Especial" onclick="botaoAtaqueBClick()"
+                    onmouseover="botaoAtaqueBHover()" onmouseout="botaoAtaqueBOut()">
+
+                <input id="defesa" type="button" value="Defender" onclick="botaoDefesaClick()"
+                    onmouseover="botaoDefesaHover()" onmouseout="botaoDefesaOut()">
+
+                <input id="descansar" type="button" value="Descansar" onclick="botaoDescansarClick()"
+                    onmouseover="botaoDescansarHover()" onmouseout="botaoDescansarOut()">
+
+                <input id="focar" type="button" value="Focar" onclick="botaoFocarClick()"
+                    onmouseover="botaoFocarHover()" onmouseout="botaoFocarOut()">
+            </div>
+        </div>
+        <!---------------------------------------------------------------------->
+        <div id="tutorial"> 
+            <p id="mensagemTutorial"></p>
+            <input id="comecarAventura" type="button" value="Começar Aventura">
+        </div>
+
     </main>
 
-
-    <script src="assets/Inicio_Selecao_Usuario_Script.js"></script>
-    <script src="assets/classe_arma_armadura_Script.js"></script>
+    <script src="assets/Inicio_Seleção_Usuário/Inicio_Selecao_Usuario_Script.js"></script>
+    <script src="assets/Classe_Arma_Armadura/classe_arma_armadura_Script.js"></script>
+    <script src="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Script.js"></script>
+    <script src="assets/HUD_Combate/hudCombate_Script.js"></script>
+    <script src="assets/Tutorial_História/tutorial_historia_Script.js"></script>
 </body>
 
 </html>

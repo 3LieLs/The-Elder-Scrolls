@@ -1,0 +1,403 @@
+/*----------------------------------------SELEÇÃO DE CLASSE----------------------------------------*/
+
+#mensagemClasse {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#mainClasse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+#guerreiroBarra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 0;
+    width: 300px;
+}
+
+#guerreiro {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaGuerreiro {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 100px;
+}
+
+#guerreiroStats {
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 40px;
+}
+
+#magoBarra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 10px;
+    width: 300px;
+}
+
+#mago {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaMago {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 100px;
+}
+
+#magoStats {
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 40px;
+}
+
+#arqueiroBarra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#arqueiro {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArqueiro {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 100px;
+}
+
+#arqueiroStats {
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 300px;
+    height: 40px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------SELEÇÃO DE ARMA----------------------------------------*/
+
+#mensagemArma {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#mainArma {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+#arma1Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#arma1 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArma1 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArma1 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+#arma2Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#arma2 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArma2 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArma2 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+#arma3Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#arma3 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArma3 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArma3 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------SELEÇÃO DE ARMADURA----------------------------------------*/
+#mensagemArmadura {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#mainArmadura {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+#armadura1Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#armadura1 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArmadura1 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArmadura1 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+#armadura2Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#armadura2 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArmadura2 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArmadura2 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+#armadura3Barra {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 300px;
+}
+
+#armadura3 {
+    margin: 50px 0 0 50px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 200px;
+    height: 50px;
+}
+
+#caracteristicaArmadura3 {
+    text-align: justify;
+    padding: 10px 10px 0px 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 15pt;
+    width: 300px;
+    height: 100px;
+}
+
+#statsArmadura3 {
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 300px;
+    height: 30px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/

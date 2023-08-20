@@ -1,0 +1,61 @@
+#acao {
+    position: absolute;
+    display:flex ;
+    flex-direction: row;
+    left: 200px;
+    bottom: 30px;
+    margin: 0px 0px 0px 0px;
+    width: 800px;
+}
+
+#ataqueA{
+    background-color: gray;
+    margin-right: 10px;
+    padding: 5pt 10pt 5pt 10pt;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 170px;
+}
+#ataqueB{
+    background-color: gray;
+    margin-right: 10px;
+    padding: 5pt 10pt 5pt 10pt;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 170px;
+}
+#defesa{
+    background-color: gray;
+    margin-right: 10px;
+    padding: 5pt 10pt 5pt 10pt;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 170px;
+}
+#descansar{
+    background-color: gray;
+    margin-right: 10px;
+    padding: 5pt 10pt 5pt 10pt;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 170px;
+}
+#focar{
+    background-color: gray;
+    margin-right: 10px;
+    padding: 5pt 10pt 5pt 10pt;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 170px;
+}
+
