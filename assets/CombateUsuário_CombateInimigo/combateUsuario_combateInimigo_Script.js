@@ -28,7 +28,7 @@ var botaoAtaqueA = window.document.querySelector('input#ataqueA')
 
 function ataqueATempo() {
     legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Básico<br>Dano causado: ${danoVal}<br>Energia gasta: ${energiaCustoVal}<br> Mana gasta: ${manaCustoVal}`
-    golemVidaVal = golemVidaVal - danoVal
+    golemVidaCombateVal = golemVidaCombateVal - danoVal
     energiaCombateVal = energiaCombateVal - energiaCustoVal
     manaCombateVal = manaCombateVal - manaCustoVal
 }
@@ -259,15 +259,27 @@ function botaoFocarOut() {
 
 /*----------GOLEM---------------*/
 function ataqueGolem() {
-    danoGolem = Math.round(Math.random() * (100 - 0) + 0);
-    if (danoGolem <= 75) {
-        legendaView.innerHTML = `Golem utilizou ataque básico<br>Dano causado: ${danoGolemA}<br>Energia usada: ${energiaGastoGolemA}`
-        vidaCombateVal = vidaCombateVal - danoGolemA
-        golemEnergiaCombateVal = golemEnergiaCombateVal - energiaGastoGolemA
+    if (golemEnergiaCombateVal > 0) {
+        danoGolem = Math.round(Math.random() * (100 - 0) + 0);
+        if (danoGolem <= 75) {
+            legendaView.innerHTML = `Golem utilizou ataque básico<br>Dano causado: ${danoGolemA}<br>Energia usada: ${energiaGastoGolemA}`
+            vidaCombateVal = vidaCombateVal - danoGolemA
+            golemEnergiaCombateVal = golemEnergiaCombateVal - energiaGastoGolemA
+        } else {
+            legendaView.innerHTML = `Golem utilizou ataque especial<br>Dano causado: ${danoGolemB}<br>Energia usada: ${energiaGastoGolemB}`
+            vidaCombateVal = vidaCombateVal - danoGolemB
+            golemEnergiaCombateVal = golemEnergiaCombateVal - energiaGastoGolemB
+        }
     } else {
-        legendaView.innerHTML = `Golem utilizou ataque especial<br>Dano causado: ${danoGolemB}<br>Energia usada: ${energiaGastoGolemB}`
-        vidaCombateVal = vidaCombateVal - danoGolemB
-        golemEnergiaCombateVal = golemEnergiaCombateVal - energiaGastoGolemB
+        energiaRecuperacaoGolem = Math.round(Math.random() * (15 - 10) + 10);
+        golemEnergiaCombateVal = golemEnergiaCombateVal + energiaRecuperacaoGolem
+        legendaView.innerHTML = `Golem utilizou descanso<br>Energia recuperada: ${energiaRecuperacaoGolem}`
+    }
+}
+
+function defesaGolem() {
+    if (golemVidaCombateVal <= golemVidaCombateVal / 2) {
+
     }
 }
 /*-----------------------------------------*/

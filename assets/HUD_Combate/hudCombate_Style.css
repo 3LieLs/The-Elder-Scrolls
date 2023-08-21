@@ -100,3 +100,93 @@
     border: solid 3px black;
     border-radius: 25%;
 }
+
+#golem{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#golemNome{
+    text-align: center;
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50pt;
+    margin: 0px;
+    padding: 0px;
+    width: 500px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemVida{
+    text-align: center;
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemEnergia{
+    text-align: center;
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+#golem{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#golemNome{
+    text-align: center;
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50pt;
+    margin: 0px;
+    padding: 0px;
+    width: 500px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemVida{
+    text-align: center;
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+#golemEnergia{
+    text-align: center;
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    border: solid 3px black;
+    border-radius: 25%;
+}

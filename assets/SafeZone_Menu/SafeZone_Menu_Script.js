@@ -50,12 +50,15 @@ function menuDisplay() {
 var mensagemSafeZoneVal = window.document.querySelector('p#mensagemSafeZone')
 mensagemSafeZoneVal.innerHTML = ``
 
-var botaoSafeZoneVal = window.document.querySelector('input#botaoSafeZone')
-botaoSafeZoneVal.addEventListener('click', botaoSafeZoneClick)
-botaoSafeZoneVal.addEventListener('mouseover', botaoSafeZoneHover)
-botaoSafeZoneVal.addEventListener('mouseout', botaoSafeZoneOut)
+/*----------------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE---------------------------------------------------------------------------*/
+/*----------------------GOLEM--------------------GOLEM--------------------GOLEM--------------------GOLEM--------------------GOLEM---------------------------------------------------------------------------*/
 
-function botaoSafeZoneClick() {
+var botaoGolemVal = window.document.querySelector('input#botaoGolem')
+botaoGolemVal.addEventListener('click', botaoGolemClick)
+botaoGolemVal.addEventListener('mouseover', botaoGolemHover)
+botaoGolemVal.addEventListener('mouseout', botaoGolemOut)
+
+function botaoGolemClick() {
     mainSafeZone.style.display = 'none'
     definirEstatisticaUsuario()
     definirEstatisticaGolem()
@@ -63,12 +66,60 @@ function botaoSafeZoneClick() {
     faseGolem = true
     mainFaseGolem.style.display = 'contents' 
 }
-function botaoSafeZoneHover() {
-    botaoSafeZoneVal.style.cursor = 'pointer'
-    botaoSafeZoneVal.style.background = 'orange'
-    botaoSafeZoneVal.style.transition = '0.5s'
+function botaoGolemHover() {
+    botaoGolemVal.style.cursor = 'pointer'
+    botaoGolemVal.style.background = 'orange'
+    botaoGolemVal.style.transition = '0.5s'
 }
-function botaoSafeZoneOut() {
-    botaoSafeZoneVal.style.background = 'gray'
+function botaoGolemOut() {
+    botaoGolemVal.style.background = 'gray'
+}
+/*----------------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE---------------------------------------------------------------------------*/
+/*----------------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE---------------------------------------------------------------------------*/
+
+var botaoGoblinVal = window.document.querySelector('input#botaoGoblin')
+botaoGoblinVal.addEventListener('click', botaoGoblinClick)
+botaoGoblinVal.addEventListener('mouseover', botaoGoblinHover)
+botaoGoblinVal.addEventListener('mouseout', botaoGoblinOut)
+
+function botaoGoblinClick() {
+    mainSafeZone.style.display = 'none'
+    definirEstatisticaUsuario()
+    definirEstatisticaGoblin()
+    mainHud.style.display = 'contents'
+    faseGoblin = true
+    mainFaseGoblin.style.display = 'contents' 
+}
+function botaoGoblinHover() {
+    botaoGoblinVal.style.cursor = 'pointer'
+    botaoGoblinVal.style.background = 'orange'
+    botaoGoblinVal.style.transition = '0.5s'
+}
+function botaoGoblinOut() {
+    botaoGoblinVal.style.background = 'gray'
+}
+/*----------------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE---------------------------------------------------------------------------*/
+/*----------------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE----------------SAFE ZONE---------------------------------------------------------------------------*/
+
+var botaoDragaoVal = window.document.querySelector('input#botaoDragao')
+botaoDragaoVal.addEventListener('click', botaoDragaoClick)
+botaoDragaoVal.addEventListener('mouseover', botaoDragaoHover)
+botaoDragaoVal.addEventListener('mouseout', botaoDragaoOut)
+
+function botaoDragaoClick() {
+    mainSafeZone.style.display = 'none'
+    definirEstatisticaUsuario()
+    definirEstatisticaGolem()
+    mainHud.style.display = 'contents'
+    faseDragao = true
+    mainFaseDragao.style.display = 'contents' 
+}
+function botaoDragaoHover() {
+    botaoDragaoVal.style.cursor = 'pointer'
+    botaoDragaoVal.style.background = 'orange'
+    botaoDragaoVal.style.transition = '0.5s'
+}
+function botaoDragaoOut() {
+    botaoDragaoVal.style.background = 'gray'
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -4,7 +4,7 @@ var danoVal, defesaVal, classeVal, armaVal, armaduraVal
 /*----------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------DISPLAY----------------------------------------*/
-classe.style.display = 'none', arma.style.display = 'none', armadura.style.display = 'none' 
+classe.style.display = 'none', arma.style.display = 'none', armadura.style.display = 'none'
 /*----------------------------------------------------------------------------------------------------*/
 
 /*----------------------MENSAGEM CLASSE----------MENSAGEM CLASSE----------MENSAGEM CLASSE----------MENSAGEM CLASSE----------MENSAGEM CLASSE------------------------------------------------------------------------------------------------------*/

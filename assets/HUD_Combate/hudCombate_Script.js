@@ -1,6 +1,7 @@
 /*----------------------------------------DISPLAY----------------------------------------*/
 mainHud.style.display = 'none', mainFaseGolem.style.display = 'none'
-/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 
 var legendaView = window.document.querySelector('p#mensagemLegenda')
 
@@ -14,11 +15,11 @@ function definirEstatisticaUsuario() {
     estatisticaEnergiaView.innerHTML = `Energia: ${energiaCombateVal}`
     estatisticaManaView.innerHTML = `Mana: ${manaCombateVal}`
 }
-/*-----------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*------------------------------GOLEM HUD------------------------------*/
+/*----------------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD---------------------------------------------------------------------------*/
 var golemVidaVal = 50, golemEnergiaVal = 30
-var golemVidaCombateVal = 50, golemEnergiaCombateVal = 30
+var golemVidaCombateVal = 50, golemEnergiaCombateVal = 30, energiaRecuperacaoGolem = 0
 var danoGolemA = 3, energiaGastoGolemA = 5, danoGolemB = 6, energiaGastoGolemB = 10, danoGolem
 
 var golemVidaView = window.document.querySelector('p#golemVida')
@@ -37,4 +38,4 @@ function definirEstatisticaGolem() {
         golemVidaCombateVal = golemVidaVal, golemEnergiaCombateVal = golemEnergiaVal
     }
 }
-/*-----------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
