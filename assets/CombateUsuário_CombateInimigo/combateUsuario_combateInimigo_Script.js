@@ -1,24 +1,11 @@
 /*----------------------------------------VARIÁVEIS----------------------------------------*/
 var vidaCombateVal = 0, manaCombateVal = 0, energiaCombateVal = 0, danoCombateVal, defesaCombateVal
-var faseGolem = false, faseDragao = false, vezUsuario = true
-/*----------------------------------------------------------------------------------------------------*/
+var faseGoblin = false, faseGolem = false, faseDragao = false, vezUsuario = true
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------DISPLAY----------------------------------------*/
 
-/*----------------------------------------------------------------------------------------------------*/
-
-var acaoAtaqueAView = window.document.querySelector('p#ataqueA')
-var acaoAtaqueBView = window.document.querySelector('p#ataqueB')
-var acaoDefesaView = window.document.querySelector('p#defesa')
-var acaoDescansarView = window.document.querySelector('p#descansar')
-var acaoFugirView = window.document.querySelector('p#fugir')
-
-acaoAtaqueAView.innerHTML = `Ataque Básico`
-acaoAtaqueBView.innerHTML = `Ataque Especial`
-acaoDefesaView.innerHTML = `Defender`
-acaoDescansarView.innerHTML = `Descansar`
-acaoFugirView.innerHTML = `Fugir`
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 function acaoIntervalo() {
     vezUsuario = true
 }
@@ -27,30 +14,56 @@ function acaoIntervalo() {
 var botaoAtaqueA = window.document.querySelector('input#ataqueA')
 
 function ataqueATempo() {
-    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Básico<br>Dano causado: ${danoVal}<br>Energia gasta: ${energiaCustoVal}<br> Mana gasta: ${manaCustoVal}`
-    golemVidaCombateVal = golemVidaCombateVal - danoVal
+    if (goblinVidaCombateVal - danoVal < 0) {
+        goblinVidaCombateVal = 0
+    } else {
+        goblinVidaCombateVal = goblinVidaCombateVal - danoVal
+    }
+    if (golemVidaCombateVal - danoVal < 0) {
+        golemVidaCombateVal = 0
+    } else {
+        golemVidaCombateVal = golemVidaCombateVal - danoVal
+    }
+    if (dragaoVidaCombateVal - danoVal < 0) {
+        dragaoVidaCombateVal = 0
+    } else {
+        dragaoVidaCombateVal = dragaoVidaCombateVal - danoVal
+    }
+    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Especial<br>Dano causado: ${danoVal + (danoVal / 2)}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
     energiaCombateVal = energiaCombateVal - energiaCustoVal
     manaCombateVal = manaCombateVal - manaCustoVal
+    usuarioCombateView()
+    inimigoCombateView()
 }
 
 function botaoAtaqueAClick() {
     if (vezUsuario == true) {
-        if (energiaCombateVal <= 0) {
-            alert(`Você está cansado demais para fazer está ação`)
+        if (energiaCombateVal <= 0 || energiaCombateVal - energiaCustoVal <= 0) {
+            alert(`Você está sem energia o suficiente para fazer está ação`)
         }
-        if (manaCombateVal <= 0) {
-            alert(`Você está sem mana fazer está ação`)
-        }
-        else {
+        if (manaCombateVal <= 0 || manaCombateVal - manaCustoVal <= 0) {
+            alert(`Você está sem mana o suficiente para fazer está ação`)
+        } else {
             vezUsuario = false
             setTimeout(ataqueATempo, 500)
-            setTimeout(definirEstatisticaUsuario, 500)
             setTimeout(acaoIntervalo, 2500)
+            if (faseGoblin == true) {
+                setTimeout(ataqueGoblin, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
+            }
             if (faseGolem == true) {
-                setTimeout(definirEstatisticaGolem, 500)
                 setTimeout(ataqueGolem, 2500)
-                setTimeout(definirEstatisticaUsuario, 2500)
-                setTimeout(definirEstatisticaGolem, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
+            }
+            if (faseDragao == true) {
+                setTimeout(ataqueDragao, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
             }
         }
     } else {
@@ -71,8 +84,7 @@ function botaoAtaqueAHover() {
 function botaoAtaqueAOut() {
     ataqueA.style.background = 'gray'
 }
-/*-----------------------------------------*/
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -80,30 +92,56 @@ function botaoAtaqueAOut() {
 var botaoAtaqueB = window.document.querySelector('input#ataqueB')
 
 function ataqueBTempo() {
-    golemVidaCombateVal = golemVidaCombateVal - (danoVal + (danoVal / 2))
+    if (goblinVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+        goblinVidaCombateVal = 0
+    } else {
+        goblinVidaCombateVal = goblinVidaCombateVal - (danoVal + (danoVal / 2))
+    }
+    if (golemVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+        golemVidaCombateVal = 0
+    } else {
+        golemVidaCombateVal = golemVidaCombateVal - (danoVal + (danoVal / 2))
+    }
+    if (dragaoVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+        dragaoVidaCombateVal = 0
+    } else {
+        dragaoVidaCombateVal = dragaoVidaCombateVal - (danoVal + (danoVal / 2))
+    }
     legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Especial<br>Dano causado: ${danoVal + (danoVal / 2)}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
     energiaCombateVal = energiaCombateVal - (energiaCustoVal + (energiaCustoVal / 2))
     manaCombateVal = manaCombateVal - (manaCustoVal + (manaCustoVal / 2))
+    usuarioCombateView()
+    inimigoCombateView()
 }
 
 function botaoAtaqueBClick() {
     if (vezUsuario == true) {
-        if (energiaCombateVal <= 0) {
+        if (energiaCombateVal <= 0 || energiaCombateVal - (energiaCustoVal + (energiaCustoVal / 2)) <= 0) {
             alert(`Você está cansado demais para fazer está ação`)
         }
-        if (manaCombateVal <= 0) {
-            alert(`Você está sem mana fazer está ação`)
-        }
-        else {
+        if (manaCombateVal <= 0 || manaCombateVal - (manaCustoVal + (manaCustoVal / 2)) <= 0) {
+            alert(`Você está sem mana o suficiente para fazer está ação`)
+        } else {
             vezUsuario = false
             setTimeout(ataqueBTempo, 500)
-            setTimeout(definirEstatisticaUsuario, 500)
             setTimeout(acaoIntervalo, 2500)
+            if (faseGoblin == true) {
+                setTimeout(ataqueGoblin, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
+            }
             if (faseGolem == true) {
-                setTimeout(definirEstatisticaGolem, 500)
                 setTimeout(ataqueGolem, 2500)
-                setTimeout(definirEstatisticaUsuario, 2500)
-                setTimeout(definirEstatisticaGolem, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
+            }
+            if (faseDragao == true) {
+                setTimeout(ataqueDragao, 2500)
+                setTimeout(usuarioCombateView, 2500)
+                setTimeout(inimigoCombateView, 2500)
+                setTimeout(inimigoDerrotado, 2500)
             }
         }
     } else {
@@ -124,8 +162,7 @@ function botaoAtaqueBHover() {
 function botaoAtaqueBOut() {
     ataqueB.style.background = 'gray'
 }
-/*-----------------------------------------*/
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -140,13 +177,24 @@ function botaoDefesaClick() {
     if (vezUsuario == true) {
         vezUsuario = false
         setTimeout(defesaTempo, 500)
-        setTimeout(definirEstatisticaUsuario, 500)
         setTimeout(acaoIntervalo, 2500)
+        if (faseGoblin == true) {
+            setTimeout(ataqueGoblin, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
         if (faseGolem == true) {
-            setTimeout(definirEstatisticaGolem, 500)
             setTimeout(ataqueGolem, 2500)
-            setTimeout(definirEstatisticaUsuario, 2500)
-            setTimeout(definirEstatisticaGolem, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
+        if (faseDragao == true) {
+            setTimeout(ataqueDragao, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
         }
     } else {
         alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
@@ -166,8 +214,7 @@ function botaoDefesaHover() {
 function botaoDefesaOut() {
     defesa.style.background = 'gray'
 }
-/*-----------------------------------------*/
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -175,21 +222,38 @@ function botaoDefesaOut() {
 var botaoDescansar = window.document.querySelector('input#descansar')
 
 function descansarTempo() {
-    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Descanso<br>Energia recuperada: ${energiaRecuperacaoVal}`
-    energiaCombateVal = energiaCombateVal + energiaRecuperacaoVal
+    if (energiaCombateVal + energiaRecuperacaoVal > energiaVal) {
+        energiaCombateVal = energiaVal
+    } else {
+        energiaCombateVal = energiaCombateVal + energiaRecuperacaoVal
+    }
+    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Descanso<br>Energia recuperado: ${energiaRecuperacaoVal}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
+    usuarioCombateView()
+    inimigoCombateView()
 }
 
 function botaoDescansarClick() {
     if (vezUsuario == true) {
         vezUsuario = false
         setTimeout(descansarTempo, 500)
-        setTimeout(definirEstatisticaUsuario, 500)
         setTimeout(acaoIntervalo, 2500)
+        if (faseGoblin == true) {
+            setTimeout(ataqueGoblin, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
         if (faseGolem == true) {
-            setTimeout(definirEstatisticaGolem, 500)
             setTimeout(ataqueGolem, 2500)
-            setTimeout(definirEstatisticaUsuario, 2500)
-            setTimeout(definirEstatisticaGolem, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
+        if (faseDragao == true) {
+            setTimeout(ataqueDragao, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
         }
     } else {
         alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
@@ -209,8 +273,7 @@ function botaoDescansarHover() {
 function botaoDescansarOut() {
     descansar.style.background = 'gray'
 }
-/*-----------------------------------------*/
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -218,21 +281,38 @@ function botaoDescansarOut() {
 var botaoFocar = window.document.querySelector('input#focar')
 
 function focarTempo() {
-    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Foco<br>Mana recuperada: ${manaRecuperacaoVal}`
-    manaCombateVal = manaCombateVal + manaRecuperacaoVal
+    if (manaCombateVal + manaRecuperacaoVal > manaVal) {
+        manaCombateVal = manaVal
+    } else {
+        manaCombateVal = manaCombateVal + manaRecuperacaoVal
+    }
+    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Focar<br>Mana recuperado: ${manaRecuperacaoVal}`
+    usuarioCombateView()
+    inimigoCombateView()
 }
 
 function botaoFocarClick() {
     if (vezUsuario == true) {
         vezUsuario = false
         setTimeout(focarTempo, 500)
-        setTimeout(definirEstatisticaUsuario, 500)
         setTimeout(acaoIntervalo, 2500)
+        if (faseGoblin == true) {
+            setTimeout(ataqueGoblin, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
         if (faseGolem == true) {
-            setTimeout(definirEstatisticaGolem, 500)
             setTimeout(ataqueGolem, 2500)
-            setTimeout(definirEstatisticaUsuario, 2500)
-            setTimeout(definirEstatisticaGolem, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
+        }
+        if (faseDragao == true) {
+            setTimeout(ataqueDragao, 2500)
+            setTimeout(usuarioCombateView, 2500)
+            setTimeout(inimigoCombateView, 2500)
+            setTimeout(inimigoDerrotado, 2500)
         }
     } else {
         alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
@@ -252,12 +332,36 @@ function botaoFocarHover() {
 function botaoFocarOut() {
     focar.style.background = 'gray'
 }
-/*-----------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
+/*----------------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD----------------GOLEM HUD---------------------------------------------------------------------------*/
+function ataqueGoblin() {
+    if (goblinVidaCombateVal > 0) {
+        if (goblinEnergiaCombateVal > 0) {
+            danoGoblin = Math.round(Math.random() * (100 - 0) + 0);
+            if (danoGoblin <= 60) {
+                legendaView.innerHTML = `Goblin utilizou ataque básico<br>Dano causado: ${danoGoblinA}<br>Energia usada: ${energiaGastoGoblinA}`
+                vidaCombateVal = vidaCombateVal - danoGoblinA
+                goblinEnergiaCombateVal = goblinEnergiaCombateVal - energiaGastoGoblinA
+            } else {
+                legendaView.innerHTML = `Goblin utilizou ataque especial<br>Dano causado: ${danoGoblinB}<br>Energia usada: ${energiaGastoGoblinB}`
+                vidaCombateVal = vidaCombateVal - danoGoblinB
+                goblinEnergiaCombateVal = goblinEnergiaCombateVal - energiaGastoGoblinB
+            }
+        } else {
+            energiaRecuperacaoGoblin = Math.round(Math.random() * (6 - 3) + 3);
+            goblinEnergiaCombateVal = goblinEnergiaCombateVal + energiaRecuperacaoGoblin
+            legendaView.innerHTML = `Goblin utilizou descanso<br>Energia recuperada: ${energiaRecuperacaoGoblin}`
+        }
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*----------GOLEM---------------*/
+
+
+/*----------------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------------------------------------------------------------------*/
 function ataqueGolem() {
     if (golemEnergiaCombateVal > 0) {
         danoGolem = Math.round(Math.random() * (100 - 0) + 0);
@@ -276,13 +380,27 @@ function ataqueGolem() {
         legendaView.innerHTML = `Golem utilizou descanso<br>Energia recuperada: ${energiaRecuperacaoGolem}`
     }
 }
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-function defesaGolem() {
-    if (golemVidaCombateVal <= golemVidaCombateVal / 2) {
 
+
+/*----------------------DRAGÃO HUD---------------DRAGÃO HUD---------------DRAGÃO HUD---------------DRAGÃO HUD---------------DRAGÃO HUD---------------------------------------------------------------------------*/
+function ataqueDragao() {
+    if (dragaoManaCombateVal > 0) {
+        danoDragao = Math.round(Math.random() * (100 - 0) + 0);
+        if (danoDragao <= 80) {
+            legendaView.innerHTML = `Dragao utilizou ataque básico<br>Dano causado: ${danoDragaoA}<br>Mana usada: ${manaGastoDragaoA}`
+            vidaCombateVal = vidaCombateVal - danoDragaoA
+            dragaoManaCombateVal = dragaoManaCombateVal - manaGastoDragaoA
+        } else {
+            legendaView.innerHTML = `Dragao utilizou ataque especial<br>Dano causado: ${danoDragaoB}<br>Mana usada: ${manaGastoDragaoB}`
+            vidaCombateVal = vidaCombateVal - danoDragaoB
+            dragaoManaCombateVal = dragaoManaCombateVal - manaGastoDragaoB
+        }
+    } else {
+        manaRecuperacaoDragao = Math.round(Math.random() * (40 - 20) + 20);
+        dragaoManaCombateVal = dragaoManaCombateVal + manaRecuperacaoDragao
+        legendaView.innerHTML = `Dragao utilizou focar<br>Mana recuperada: ${manaRecuperacaoDragao}`
     }
 }
-/*-----------------------------------------*/
-
-
-
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

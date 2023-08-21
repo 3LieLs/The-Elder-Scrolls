@@ -1,10 +1,10 @@
 /*----------------------------------------VARIÁVEIS----------------------------------------*/
 var menuAbertoFechado = false
-/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------DISPLAY----------------------------------------*/
 mainSafeZone.style.display = 'none', mainBotaoMenu.style.display = 'none', menu.style.display = 'none'
-/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------MENU---------------------MENU---------------------MENU---------------------MENU---------------------MENU---------------------------------------------------------------------------*/
 var menuNomeVal = window.document.querySelector(`p#menuNome`)
@@ -59,12 +59,13 @@ botaoGolemVal.addEventListener('mouseover', botaoGolemHover)
 botaoGolemVal.addEventListener('mouseout', botaoGolemOut)
 
 function botaoGolemClick() {
-    mainSafeZone.style.display = 'none'
-    definirEstatisticaUsuario()
-    definirEstatisticaGolem()
-    mainHud.style.display = 'contents'
     faseGolem = true
-    mainFaseGolem.style.display = 'contents' 
+    mainSafeZone.style.display = 'none'
+    mainHud.style.display = 'contents'
+    mainFaseGolem.style.display = 'contents'
+    definirEstatisticaGeral()
+    usuarioCombateView()
+    inimigoCombateView()
 }
 function botaoGolemHover() {
     botaoGolemVal.style.cursor = 'pointer'
@@ -83,12 +84,13 @@ botaoGoblinVal.addEventListener('mouseover', botaoGoblinHover)
 botaoGoblinVal.addEventListener('mouseout', botaoGoblinOut)
 
 function botaoGoblinClick() {
-    mainSafeZone.style.display = 'none'
-    definirEstatisticaUsuario()
-    definirEstatisticaGoblin()
-    mainHud.style.display = 'contents'
     faseGoblin = true
-    mainFaseGoblin.style.display = 'contents' 
+    mainSafeZone.style.display = 'none'
+    mainHud.style.display = 'contents'
+    mainFaseGoblin.style.display = 'contents'
+    definirEstatisticaGeral()
+    usuarioCombateView()
+    inimigoCombateView()
 }
 function botaoGoblinHover() {
     botaoGoblinVal.style.cursor = 'pointer'
@@ -107,12 +109,13 @@ botaoDragaoVal.addEventListener('mouseover', botaoDragaoHover)
 botaoDragaoVal.addEventListener('mouseout', botaoDragaoOut)
 
 function botaoDragaoClick() {
-    mainSafeZone.style.display = 'none'
-    definirEstatisticaUsuario()
-    definirEstatisticaGolem()
-    mainHud.style.display = 'contents'
     faseDragao = true
-    mainFaseDragao.style.display = 'contents' 
+    mainSafeZone.style.display = 'none'
+    mainHud.style.display = 'contents'
+    mainFaseDragao.style.display = 'contents'
+    definirEstatisticaGeral()
+    usuarioCombateView()
+    inimigoCombateView()
 }
 function botaoDragaoHover() {
     botaoDragaoVal.style.cursor = 'pointer'
