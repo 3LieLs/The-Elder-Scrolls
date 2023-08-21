@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/Classe_Arma_Armadura/classe_arma_armadura_Style.css">
     <link rel="stylesheet" href="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Style.css">
     <link rel="stylesheet" href="assets/HUD_Combate/hudCombate_Style.css">
-    <link rel="stylesheet" href="assets/Tutorial_História/tutorial_historia_Style.css">
+    <link rel="stylesheet" href="assets/SafeZone_Menu/SafeZone_Menu_Style.css">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                     <p id="guerreiroStats">Status: Vida = 20 / Mana = 10 / Energia = 15</p>
                 </div>
                 <div id="magoBarra">
-                    <input id="mago" type="button" value="Mago">
+                    <input id="mago" type="button" value="Mago" onclick="botaoClasseMagoClick()">
                     <p id="caracteristicaMago">Muitos mágicos não precisam de nenhum material; aqueles que o fazem podem
                         exigir apenas materiais simples e facilmente obtidos. Varinhas e cajados há muito tempo são
                         usados como requisitos para o mago.</p>
@@ -106,14 +106,35 @@
                 </div>
             </div>
         </div>
-        <!----------------------TUTORIAL---------------------->
         <!---------------------------------------------------------------------->
-        <div id="mainFaseGolem">
-            <div id="golem">
-                <p id="golemNome">GOLEM</p>
-                <p id="golemVida"></p>
-                <p id="golemEnergia"></p>
-                <p id="golemMana"></p>
+        <!----------------------HUD / MENU---------------------->
+        <div id="mainBotaoMenu">
+            <input id="botaoMenu" type="button" value="Menu" onclick="menuDisplay()">
+        </div>
+        <div id="menu">
+            <div id="mainMenu">
+                <div id="menuStats">
+                    <div id="menuNomeClasseGenero">
+                        <p id="menuNome"></p>
+                        <p id="menuGenero"></p>
+                        <p id="menuClasse"></p>
+                    </div>
+                    <div id="menuVidaEnergiaMana">
+                        <p id="menuVida"></p>
+                        <p id="menuEnergia"></p>
+                        <p id="menuMana"></p>
+                    </div>
+                </div>
+                <div id="menuEquip">
+                    <div id="menuEquipAtaque">
+                        <p id="menuArma"></p>
+                        <p id="menuDano"></p>
+                    </div>
+                    <div id="menuEquipDefesa">
+                        <p id="menuArmadura"></p>
+                        <p id="menuDefesa"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="mainHud">
@@ -143,18 +164,28 @@
             </div>
         </div>
         <!---------------------------------------------------------------------->
-        <div id="tutorial"> 
-            <p id="mensagemTutorial"></p>
-            <input id="comecarAventura" type="button" value="Começar Aventura">
+        <!----------------------HISTÓRIA---------------------->
+        <div id="mainSafeZone">
+            <p id="mensagemSafeZone"></p>
+            <input id="botaoSafeZone" type="button" value="Teste">
         </div>
-
+        <!---------------------------------------------------------------------->
+        <!----------------------INIMIGOS---------------------->
+        <div id="mainFaseGolem">
+            <div id="golem">
+                <p id="golemNome">GOLEM</p>
+                <p id="golemVida"></p>
+                <p id="golemEnergia"></p>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------->
     </main>
 
     <script src="assets/Inicio_Seleção_Usuário/Inicio_Selecao_Usuario_Script.js"></script>
     <script src="assets/Classe_Arma_Armadura/classe_arma_armadura_Script.js"></script>
     <script src="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Script.js"></script>
     <script src="assets/HUD_Combate/hudCombate_Script.js"></script>
-    <script src="assets/Tutorial_História/tutorial_historia_Script.js"></script>
+    <script src="assets/SafeZone_Menu/SafeZone_Menu_Script.js"></script>
 </body>
 
 </html>

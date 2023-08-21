@@ -100,14 +100,3 @@
     border: solid 3px black;
     border-radius: 25%;
 }
-#golemMana{
-    text-align: center;
-    background-color: blue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20pt;
-    margin: 0px;
-    padding: 0px;
-    width: 200px;
-    border: solid 3px black;
-    border-radius: 25%;
-}

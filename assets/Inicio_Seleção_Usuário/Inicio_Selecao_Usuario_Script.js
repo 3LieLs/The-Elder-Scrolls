@@ -1,23 +1,14 @@
 /*----------------------------------------VARIÁVEIS----------------------------------------*/
-
-var vidaVal = 0, manaVal = 0, manaCustoVal, manaRecuperacaoVal, energiaVal = 0, energiaCustoVal, energiaRecuperacaoVal
-var danoVal, defesaVal, classeVal, armaVal, armaduraVal
 var nomeUsuarioVal, generoVal
-var faseGolem = false, faseDragao = false, vezUsuario = true
-
 /*----------------------------------------------------------------------------------------------------*/
+
 /*----------------------------------------DISPLAY----------------------------------------*/
-
 inicio.style.display = 'contents', selecao.style.display = 'none', usuario.style.display = 'none' 
-classe.style.display = 'none', arma.style.display = 'none', armadura.style.display = 'none' 
-mainHud.style.display = 'none', tutorial.style.display = 'none', mainFaseGolem.style.display = 'none'
-
 /*----------------------------------------------------------------------------------------------------*/
 
 
 
 /*----------------------------------------INICIO----------------------------------------*/
-
 var botaoInicioVal = window.document.querySelector('input#botaoInicio')
 botaoInicioVal.addEventListener('click', botaoInicioClick)
 botaoInicioVal.addEventListener('mouseover', botaoInicioHover) //Serve para deixar o html mais limpinho

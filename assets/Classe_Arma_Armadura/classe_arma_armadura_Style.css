@@ -10,14 +10,15 @@
 #mainClasse {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding: 0 20px 0 20px;
 }
 
 #guerreiroBarra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 10px 0 0;
+    left: 5%;
+    margin: 0px 0px 0px 0px;
     width: 300px;
 }
 
@@ -38,7 +39,7 @@
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
+    width: 280px;
     height: 100px;
 }
 
@@ -54,9 +55,12 @@
 }
 
 #magoBarra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 10px 0 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0px 0px 0px 0px;
     width: 300px;
 }
 
@@ -77,7 +81,7 @@
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
+    width: 280px;
     height: 100px;
 }
 
@@ -93,9 +97,11 @@
 }
 
 #arqueiroBarra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    right: 5%;
+    margin: 0 0 0 0px;
     width: 300px;
 }
 
@@ -116,7 +122,7 @@
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
+    width: 280px;
     height: 100px;
 }
 
@@ -150,9 +156,11 @@
 }
 
 #arma1Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    left: 5%;
+    margin: 0 0 0 0px;
     width: 300px;
 }
 
@@ -172,8 +180,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
@@ -189,9 +197,12 @@
 }
 
 #arma2Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0px 0px 0px 0px;
     width: 300px;
 }
 
@@ -211,8 +222,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
@@ -228,9 +239,11 @@
 }
 
 #arma3Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    right: 5%;
+    margin: 0 0 0 0px;
     width: 300px;
 }
 
@@ -250,8 +263,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
@@ -284,9 +297,11 @@
 }
 
 #armadura1Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    left: 5%;
+    margin: 0 0 0 0px;
     width: 300px;
 }
 
@@ -306,8 +321,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
@@ -323,9 +338,12 @@
 }
 
 #armadura2Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0px 0px 0px 0px;
     width: 300px;
 }
 
@@ -345,8 +363,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
@@ -362,9 +380,11 @@
 }
 
 #armadura3Barra {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10px;
+    right: 5%;
+    margin: 0 0 0 0px;
     width: 300px;
 }
 
@@ -384,8 +404,8 @@
     background-color: black;
     color: orangered;
     border: solid 3px gray;
-    font-size: 15pt;
-    width: 300px;
+    font-size: 12pt;
+    width: 280px;
     height: 100px;
 }
 
