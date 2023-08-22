@@ -17,8 +17,15 @@ var menuManaVal = window.document.querySelector(`p#menuMana`)
 
 var menuArmaVal = window.document.querySelector(`p#menuArma`)
 var menuDanoVal = window.document.querySelector(`p#menuDano`)
+var menuEnergiaCustoVal = window.document.querySelector(`p#menuEnergiaCusto`)
+var menuManaCustoVal = window.document.querySelector(`p#menuManaCusto`)
+
 var menuArmaduraVal = window.document.querySelector(`p#menuArmadura`)
 var menuDefesaVal = window.document.querySelector(`p#menuDefesa`)
+var menuEnergiaRecuperacaoVal = window.document.querySelector(`p#menuEnergiaRecuperacao`)
+var menuManaRecuperacaoVal = window.document.querySelector(`p#menuManaRecuperacao`)
+
+
 
 function menuDisplay() {
     if (menuAbertoFechado == false) {
@@ -34,8 +41,14 @@ function menuDisplay() {
 
         menuArmaVal.innerHTML = `Arma:<br>${armaVal}`
         menuDanoVal.innerHTML = `Dano: ${danoVal}`
+        menuEnergiaCustoVal.innerHTML = `E custo: ${energiaCustoVal}`
+        menuManaCustoVal.innerHTML = `M custo: ${manaCustoVal}`
+
         menuArmaduraVal.innerHTML = `Armadura:<br>${armaduraVal}`
         menuDefesaVal.innerHTML = `Defesa: ${defesaVal}`
+        menuEnergiaRecuperacaoVal.innerHTML = `E recuperação: ${energiaRecuperacaoVal}`
+        menuManaRecuperacaoVal.innerHTML = `M recuperação: ${manaRecuperacaoVal}`
+        
         menuAbertoFechado = true
     } else {
         menu.style.display = 'none'
@@ -60,6 +73,7 @@ botaoGolemVal.addEventListener('mouseout', botaoGolemOut)
 
 function botaoGolemClick() {
     faseGolem = true
+    mainHudDisplay = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseGolem.style.display = 'contents'
@@ -85,6 +99,7 @@ botaoGoblinVal.addEventListener('mouseout', botaoGoblinOut)
 
 function botaoGoblinClick() {
     faseGoblin = true
+    mainHudDisplay = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseGoblin.style.display = 'contents'
@@ -110,6 +125,7 @@ botaoDragaoVal.addEventListener('mouseout', botaoDragaoOut)
 
 function botaoDragaoClick() {
     faseDragao = true
+    mainHudDisplay = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseDragao.style.display = 'contents'

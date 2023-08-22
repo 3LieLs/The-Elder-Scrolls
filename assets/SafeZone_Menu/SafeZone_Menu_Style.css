@@ -157,6 +157,32 @@
     border-radius: 10%;
 }
 
+#menuEnergiaCusto {
+    text-align: center;
+    align-self: center;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: green;
+    width: 150px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: solid 3px black;
+    border-radius: 10%;
+}
+
+#menuManaCusto {
+    text-align: center;
+    align-self: center;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: green;
+    width: 150px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: solid 3px black;
+    border-radius: 10%;
+}
+
 #menuEquipDefesa {
     display: flex;
     flex-direction: column;
@@ -185,6 +211,32 @@
     text-align: center;
     align-self: center;
     font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: green;
+    width: 150px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: solid 3px black;
+    border-radius: 10%;
+}
+
+#menuEnergiaRecuperacao {
+    text-align: center;
+    align-self: center;
+    font-size: 14pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: green;
+    width: 150px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: solid 3px black;
+    border-radius: 10%;
+}
+
+#menuManaRecuperacao {
+    text-align: center;
+    align-self: center;
+    font-size: 14pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
     width: 150px;
@@ -224,6 +276,7 @@
     border: solid 3px black;
     border-radius: 20%;
 }
+
 /*----------------------GOLEM--------------------GOLEM--------------------GOLEM--------------------GOLEM--------------------GOLEM---------------------------------------------------------------------------*/
 
 #botaoGolem {

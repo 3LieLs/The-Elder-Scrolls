@@ -8,7 +8,7 @@
     width: 800px;
 }
 
-#ataqueA{
+#ataqueBasico{
     background-color: gray;
     margin-right: 10px;
     padding: 5pt 10pt 5pt 10pt;
@@ -18,7 +18,7 @@
     border-radius: 25%;
     width: 170px;
 }
-#ataqueB{
+#ataqueEspecial{
     background-color: gray;
     margin-right: 10px;
     padding: 5pt 10pt 5pt 10pt;

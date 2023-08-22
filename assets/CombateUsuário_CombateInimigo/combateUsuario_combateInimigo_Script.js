@@ -1,6 +1,10 @@
 /*----------------------------------------VARIÁVEIS----------------------------------------*/
 var vidaCombateVal = 0, manaCombateVal = 0, energiaCombateVal = 0, danoCombateVal, defesaCombateVal
-var faseGoblin = false, faseGolem = false, faseDragao = false, vezUsuario = true
+var faseGoblin = false, faseGolem = false, faseDragao = false, vezUsuario = true, mainHudDisplay = false
+
+parseInt(vidaCombateVal), parseInt(manaCombateVal), parseInt(energiaCombateVal), parseInt(danoCombateVal), parseInt(defesaCombateVal)
+parseInt(vidaVal), parseInt(manaVal), parseInt(energiaVal)
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------DISPLAY----------------------------------------*/
@@ -9,11 +13,15 @@ var faseGoblin = false, faseGolem = false, faseDragao = false, vezUsuario = true
 function acaoIntervalo() {
     vezUsuario = true
 }
-
 /*----------ATAQUE BÁSICO---------------*/
-var botaoAtaqueA = window.document.querySelector('input#ataqueA')
+var botaoAtaqueBasico = window.document.querySelector('input#ataqueBasico')
 
-function ataqueATempo() {
+document.addEventListener(`keypress`, ataqueBasicoAtalho)
+botaoAtaqueBasico.addEventListener('click', botaoAtaqueBasicoClick)
+botaoAtaqueBasico.addEventListener('mouseover', botaoAtaqueBasicoHover)
+botaoAtaqueBasico.addEventListener('mouseout', botaoAtaqueBasicoOut)
+
+function ataqueBasicoTempo() {
     if (goblinVidaCombateVal - danoVal < 0) {
         goblinVidaCombateVal = 0
     } else {
@@ -29,14 +37,23 @@ function ataqueATempo() {
     } else {
         dragaoVidaCombateVal = dragaoVidaCombateVal - danoVal
     }
-    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Especial<br>Dano causado: ${danoVal + (danoVal / 2)}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
+    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Básico<br>Dano causado: ${danoVal}<br>Energia gasta: ${energiaCustoVal}`
     energiaCombateVal = energiaCombateVal - energiaCustoVal
     manaCombateVal = manaCombateVal - manaCustoVal
     usuarioCombateView()
     inimigoCombateView()
 }
 
-function botaoAtaqueAClick() {
+function ataqueBasicoAtalho(atalho) {
+    if (mainHudDisplay == true) {
+        if (atalho.key == '1') {
+            console.log("Ataque Básico usado");
+            botaoAtaqueBasico.click()
+        }
+    }
+}
+
+function botaoAtaqueBasicoClick() {
     if (vezUsuario == true) {
         if (energiaCombateVal <= 0 || energiaCombateVal - energiaCustoVal <= 0) {
             alert(`Você está sem energia o suficiente para fazer está ação`)
@@ -45,7 +62,7 @@ function botaoAtaqueAClick() {
             alert(`Você está sem mana o suficiente para fazer está ação`)
         } else {
             vezUsuario = false
-            setTimeout(ataqueATempo, 500)
+            setTimeout(ataqueBasicoTempo, 500)
             setTimeout(acaoIntervalo, 2500)
             if (faseGoblin == true) {
                 setTimeout(ataqueGoblin, 2500)
@@ -67,63 +84,77 @@ function botaoAtaqueAClick() {
             }
         }
     } else {
-        alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
+        console.log(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
     }
 }
 
-function botaoAtaqueAHover() {
+function botaoAtaqueBasicoHover() {
     if (vezUsuario == true) {
-        ataqueA.style.cursor = 'pointer'
-        ataqueA.style.background = 'purple'
-        ataqueA.style.transition = '0.5s'
+        ataqueBasico.style.cursor = 'pointer'
+        ataqueBasico.style.background = 'purple'
+        ataqueBasico.style.transition = '0.5s'
     } else {
-        ataqueA.style.cursor = 'not-allowed'
+        ataqueBasico.style.cursor = 'not-allowed'
     }
 }
 
-function botaoAtaqueAOut() {
-    ataqueA.style.background = 'gray'
+function botaoAtaqueBasicoOut() {
+    ataqueBasico.style.background = 'gray'
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
 /*----------ATAQUE ESPECIAL---------------*/
-var botaoAtaqueB = window.document.querySelector('input#ataqueB')
+var botaoAtaqueEspecial = window.document.querySelector('input#ataqueEspecial')
 
-function ataqueBTempo() {
-    if (goblinVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+document.addEventListener(`keypress`, ataqueEspecialAtalho)
+botaoAtaqueEspecial.addEventListener('click', botaoAtaqueEspecialClick)
+botaoAtaqueEspecial.addEventListener('mouseover', botaoAtaqueEspecialHover)
+botaoAtaqueEspecial.addEventListener('mouseout', botaoAtaqueEspecialOut)
+
+function ataqueEspecialTempo() {
+    if (goblinVidaCombateVal - parseInt((danoVal + (danoVal / 2))) < 0) {
         goblinVidaCombateVal = 0
     } else {
-        goblinVidaCombateVal = goblinVidaCombateVal - (danoVal + (danoVal / 2))
+        goblinVidaCombateVal = goblinVidaCombateVal - parseInt((danoVal + (danoVal / 2)))
     }
-    if (golemVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+    if (golemVidaCombateVal - parseInt((danoVal + (danoVal / 2))) < 0) {
         golemVidaCombateVal = 0
     } else {
-        golemVidaCombateVal = golemVidaCombateVal - (danoVal + (danoVal / 2))
+        golemVidaCombateVal = golemVidaCombateVal - parseInt((danoVal + (danoVal / 2)))
     }
-    if (dragaoVidaCombateVal - (danoVal + (danoVal / 2)) < 0) {
+    if (dragaoVidaCombateVal - parseInt((danoVal + (danoVal / 2))) < 0) {
         dragaoVidaCombateVal = 0
     } else {
-        dragaoVidaCombateVal = dragaoVidaCombateVal - (danoVal + (danoVal / 2))
+        dragaoVidaCombateVal = dragaoVidaCombateVal - parseInt((danoVal + (danoVal / 2)))
     }
     legendaView.innerHTML = `${nomeUsuarioVal} utilizou Ataque Especial<br>Dano causado: ${danoVal + (danoVal / 2)}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
-    energiaCombateVal = energiaCombateVal - (energiaCustoVal + (energiaCustoVal / 2))
-    manaCombateVal = manaCombateVal - (manaCustoVal + (manaCustoVal / 2))
+    energiaCombateVal = energiaCombateVal - parseInt((energiaCustoVal + (energiaCustoVal / 2)))
+    manaCombateVal = manaCombateVal - parseInt((manaCustoVal + (manaCustoVal / 2)))
     usuarioCombateView()
     inimigoCombateView()
 }
 
-function botaoAtaqueBClick() {
+function ataqueEspecialAtalho(atalho) {
+    if (mainHudDisplay == true) {
+        if (atalho.key == '2') {
+            console.log("Ataque Especial usado");
+            botaoAtaqueEspecial.click()
+        }
+    }
+}
+
+function botaoAtaqueEspecialClick() {
     if (vezUsuario == true) {
-        if (energiaCombateVal <= 0 || energiaCombateVal - (energiaCustoVal + (energiaCustoVal / 2)) <= 0) {
+        if (energiaCombateVal <= 0 || energiaCombateVal - parseInt((energiaCustoVal + (energiaCustoVal / 2))) <= 0) {
             alert(`Você está cansado demais para fazer está ação`)
         }
-        if (manaCombateVal <= 0 || manaCombateVal - (manaCustoVal + (manaCustoVal / 2)) <= 0) {
+        if (manaCombateVal <= 0 || manaCombateVal - parseInt((manaCustoVal + (manaCustoVal / 2))) <= 0) {
             alert(`Você está sem mana o suficiente para fazer está ação`)
         } else {
             vezUsuario = false
-            setTimeout(ataqueBTempo, 500)
+            setTimeout(ataqueEspecialTempo, 500)
             setTimeout(acaoIntervalo, 2500)
             if (faseGoblin == true) {
                 setTimeout(ataqueGoblin, 2500)
@@ -145,22 +176,22 @@ function botaoAtaqueBClick() {
             }
         }
     } else {
-        alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
+        console.log(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
     }
 }
 
-function botaoAtaqueBHover() {
+function botaoAtaqueEspecialHover() {
     if (vezUsuario == true) {
-        ataqueB.style.cursor = 'pointer'
-        ataqueB.style.background = 'purple'
-        ataqueB.style.transition = '0.5s'
+        ataqueEspecial.style.cursor = 'pointer'
+        ataqueEspecial.style.background = 'purple'
+        ataqueEspecial.style.transition = '0.5s'
     } else {
-        ataqueB.style.cursor = 'not-allowed'
+        ataqueEspecial.style.cursor = 'not-allowed'
     }
 }
 
-function botaoAtaqueBOut() {
-    ataqueB.style.background = 'gray'
+function botaoAtaqueEspecialOut() {
+    ataqueEspecial.style.background = 'gray'
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -169,8 +200,22 @@ function botaoAtaqueBOut() {
 /*----------DEFENDER---------------*/
 var botaoDefesa = window.document.querySelector('input#defesa')
 
+document.addEventListener(`keypress`, defesaAtalho)
+botaoDefesa.addEventListener('click', botaoDefesaClick)
+botaoDefesa.addEventListener('mouseover', botaoDefesaHover)
+botaoDefesa.addEventListener('mouseout', botaoDefesaOut)
+
 function defesaTempo() {
-    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Defesa<br> Defesa aumentou para ${defesaVal + (defesaVal / 2)}`
+    legendaView.innerHTML = `${nomeUsuarioVal} utilizou Defesa<br> Defesa aumentou para ${parseInt(defesaVal + (defesaVal / 2))}`
+}
+
+function defesaAtalho(atalho) {
+    if (mainHudDisplay == true) {
+        if (atalho.key == '3') {
+            console.log("Defesa usado");
+            botaoDefesa.click()
+        }
+    }
 }
 
 function botaoDefesaClick() {
@@ -197,7 +242,7 @@ function botaoDefesaClick() {
             setTimeout(inimigoDerrotado, 2500)
         }
     } else {
-        alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
+        console.log(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
     }
 }
 
@@ -221,6 +266,11 @@ function botaoDefesaOut() {
 /*----------DESCANSAR---------------*/
 var botaoDescansar = window.document.querySelector('input#descansar')
 
+document.addEventListener(`keypress`, descansarAtalho)
+botaoDescansar.addEventListener('click', botaoDescansarClick)
+botaoDescansar.addEventListener('mouseover', botaoDescansarHover)
+botaoDescansar.addEventListener('mouseout', botaoDescansarOut)
+
 function descansarTempo() {
     if (energiaCombateVal + energiaRecuperacaoVal > energiaVal) {
         energiaCombateVal = energiaVal
@@ -230,6 +280,15 @@ function descansarTempo() {
     legendaView.innerHTML = `${nomeUsuarioVal} utilizou Descanso<br>Energia recuperado: ${energiaRecuperacaoVal}<br>Energia gasta: ${energiaCustoVal + (energiaCustoVal / 2)}`
     usuarioCombateView()
     inimigoCombateView()
+}
+
+function descansarAtalho(atalho) {
+    if (mainHudDisplay == true) {
+        if (atalho.key == '4') {
+            console.log("Descanso usado");
+            botaoDescansar.click()
+        }
+    }
 }
 
 function botaoDescansarClick() {
@@ -256,7 +315,7 @@ function botaoDescansarClick() {
             setTimeout(inimigoDerrotado, 2500)
         }
     } else {
-        alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
+        console.log(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
     }
 }
 
@@ -280,6 +339,11 @@ function botaoDescansarOut() {
 /*----------FOCAR---------------*/
 var botaoFocar = window.document.querySelector('input#focar')
 
+document.addEventListener(`keypress`, focarAtalho)
+botaoFocar.addEventListener('click', botaoFocarClick)
+botaoFocar.addEventListener('mouseover', botaoFocarHover)
+botaoFocar.addEventListener('mouseout', botaoFocarOut)
+
 function focarTempo() {
     if (manaCombateVal + manaRecuperacaoVal > manaVal) {
         manaCombateVal = manaVal
@@ -289,6 +353,15 @@ function focarTempo() {
     legendaView.innerHTML = `${nomeUsuarioVal} utilizou Focar<br>Mana recuperado: ${manaRecuperacaoVal}`
     usuarioCombateView()
     inimigoCombateView()
+}
+
+function focarAtalho(atalho) {
+    if (mainHudDisplay == true) {
+        if (atalho.key == '5') {
+            console.log("Foco usado");
+            botaoFocar.click()
+        }
+    }
 }
 
 function botaoFocarClick() {
@@ -315,7 +388,7 @@ function botaoFocarClick() {
             setTimeout(inimigoDerrotado, 2500)
         }
     } else {
-        alert(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
+        console.log(`Calma ${nomeUsuarioVal}, espera a sua vez.`)
     }
 }
 
