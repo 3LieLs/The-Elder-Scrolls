@@ -16,7 +16,7 @@ main {
 /*----------------------------------------INICIO----------------------------------------*/
 #mensagemInicio {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 10%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -28,8 +28,8 @@ main {
     border-radius: 20%;
     display: block;
     margin: auto;
-    margin-top: 50px;
-    width: 400px;
+    margin-top: 5%;
+    width: 35%;
     height: 200px;
 }
 @keyframes botaoAnimacao {
@@ -44,7 +44,7 @@ main {
 /*----------------------------------------SELEÇÃO DE GÊNERO----------------------------------------*/
 #mensagemSelecao {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 10%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -56,8 +56,8 @@ main {
     border-radius: 20%;
     display: block;
     margin: auto;
-    margin-top: 50px;
-    width: 200px;
+    margin-top: 5%;
+    width: 20%;
     height: 50px;
 }
 #botaoSelecao_F {
@@ -68,8 +68,8 @@ main {
     border-radius: 20%;
     display: block;
     margin: auto;
-    margin-top: 50px;
-    width: 200px;
+    margin-top: 5%;
+    width: 20%;
     height: 50px;
 }
 /*----------------------------------------------------------------------------------------------------*/
@@ -77,7 +77,7 @@ main {
 /*----------------------------------------SELEÇÃO DE NOME----------------------------------------*/
 #mensagemUsuario {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 10%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -89,7 +89,7 @@ main {
     display: block;
     margin: auto;
     font-size: 50pt;
-    width: 500px;
+    width: 40%;
     height: 100px;
 }
 #enviarUsuario{
@@ -99,9 +99,9 @@ main {
     border-radius: 100%;
     display: block;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 5%;
     font-size: 25pt;
-    width: 200px;
+    width: 15%;
     height: 50px;
 }
 @keyframes botaoAnimacaoUsuario {

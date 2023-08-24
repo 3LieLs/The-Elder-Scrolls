@@ -1,40 +1,47 @@
 #botaoMenu {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 5%;
+    left: 5%;
     background-color: gray;
-    width: 80px;
+    width: 8%;
 }
 
 #mainMenu {
     background-color: rgb(167, 44, 0);
+    border: solid 5px black;
+    border-radius: 20%;
     position: absolute;
     top: 10%;
     left: 5%;
-    width: 620px;
-    height: 450px;
+    width: 87%;
+    height: 85%;
+    z-index: 9999;
 }
 
 #menuStats {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    position: absolute;
+    top: 10%;
+    width: 100%;
 }
 
 #menuEquip {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
-    width: 600px;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
 }
 
 #menuNomeClasseGenero {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
-    width: 600px;
-    padding: 10px;
+    align-items: center;
+    top: 30%;
+    left: 31%;
+    width: 60%; 
 }
 
 #menuNome {
@@ -42,8 +49,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 180px;
-    margin: 0px 15px 0px 0px;
+    width: 100%;
+    margin: 0px 0px 0px 10%;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -54,7 +61,7 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 180px;
+    width: 100%;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
@@ -67,7 +74,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
     color: white;
-    width: 180px;
+    width: 100%;
     margin: 0px 0px 0px 15px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
@@ -78,11 +85,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 60px;
-    top: 20%;
-    left: 5%;
-    width: 600px;
-    padding: 10px;
+    align-items: center;
+    top: 30%;
+    left: 31%;
+    width: 60%; 
 }
 
 #menuVida {
@@ -90,8 +96,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 180px;
-    margin: 0px 15px 0px 0px;
+    width: 100%;
+    margin: 0px 0px 0px 10%;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -102,8 +108,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 180px;
-    margin: 0px 0px 0px 0px;
+    width: 100%;
+    margin: 0px 0px 0px 10%;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -114,8 +120,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 180px;
-    margin: 0px 0px 0px 15px;
+    width: 100%;
+    margin: 0px 0px 0px 10%;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -125,10 +131,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     top: 30%;
-    left: 5%;
-    width: 300px;
-    padding: 10px;
+    left: 31%;
+    width: 30%; 
 }
 
 #menuArma {
@@ -136,7 +142,7 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 280px;
+    width: 80%;
     height: 50px;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -150,8 +156,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -163,8 +169,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -176,8 +182,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -187,11 +193,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     top: 30%;
     left: 31%;
-    width: 300px;
-    padding: 10px;
-    margin-left: 8px;
+    width: 30%;   
 }
 
 #menuArmadura {
@@ -199,7 +204,7 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 280px;
+    width: 80%;
     height: 50px;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -213,8 +218,8 @@
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -226,8 +231,8 @@
     font-size: 14pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -239,8 +244,8 @@
     font-size: 14pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: green;
-    width: 150px;
-    margin: 0px 15px 0px 0px;
+    width: 70%;
+    margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border: solid 3px black;
     border-radius: 10%;
@@ -266,10 +271,10 @@
 #botaoGoblin {
     position: absolute;
     background-color: gray;
-    top: 550px;
+    bottom: 5%;
     left: 20%;
     transform: translate(-50%);
-    width: 300px;
+    width: 25%;
     height: 50px;
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -282,10 +287,10 @@
 #botaoGolem {
     position: absolute;
     background-color: gray;
-    top: 550px;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%);
-    width: 300px;
+    width: 25%;
     height: 50px;
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -296,10 +301,10 @@
 #botaoDragao {
     position: absolute;
     background-color: gray;
-    top: 550px;
+    bottom: 5%;
     left: 80%;
     transform: translate(-50%);
-    width: 300px;
+    width: 25%;
     height: 50px;
     font-size: 15pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

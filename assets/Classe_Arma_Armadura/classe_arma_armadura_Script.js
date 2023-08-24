@@ -15,10 +15,10 @@ function Classe() {
     enviarUsuario = window.document.querySelector('input#nomeUsuario')
     nomeUsuarioVal = String(enviarUsuario.value)
     if (generoVal == 'Homem') {
-        escolhaClasse.innerHTML = `Olá <strong>${nomeUsuarioVal}</strong>. É um prazer conhece-lo.<br>Escolha a sua classe`
+        escolhaClasse.innerHTML = `Escolha a sua classe`
     }
     if (generoVal == 'Mulher') {
-        escolhaClasse.innerHTML = `Olá, <strong>${nomeUsuarioVal}</strong>. É um prazer conhece-la.<br>Escolha a sua classe`
+        escolhaClasse.innerHTML = `Escolha a sua classe`
     }
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -609,6 +609,7 @@ function Armadura() {
         statsArmadura1.innerHTML = `Defesa: 2 / Energia recuperação: 18`
 
         function botaoArmadura1Click() {
+            safeZone = true
             armaduraVal = 'Armadura de couro'
             defesaVal = 2
             energiaRecuperacaoVal = 18
@@ -639,6 +640,7 @@ function Armadura() {
         statsArmadura2.innerHTML = `Defesa: 3 / Energia recuperação: 16`
 
         function botaoArmadura2Click() {
+            safeZone = true
             armaduraVal = 'Armadura de escamas'
             defesaVal = 3
             energiaRecuperacaoVal = 16
@@ -669,6 +671,7 @@ function Armadura() {
         statsArmadura3.innerHTML = `Defesa: 5 / Energia recuperação: 13`
 
         function botaoArmadura3Click() {
+            safeZone = true
             armaduraVal = 'Armadura de escamas de aço'
             defesaVal = 5
             energiaRecuperacaoVal = 13

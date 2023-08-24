@@ -2,7 +2,7 @@
 
 #mensagemClasse {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -10,7 +10,7 @@
 #mainClasse {
     display: flex;
     flex-direction: row;
-    padding: 0 20px 0 20px;
+    padding: 0 2% 0 2%;
 }
 
 #guerreiroBarra {
@@ -19,39 +19,39 @@
     flex-direction: column;
     left: 5%;
     margin: 0px 0px 0px 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #guerreiro {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 75%;
     height: 50px;
 }
 
 #caracteristicaGuerreiro {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 2% 2% 0% 2%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
-    height: 100px;
+    width: 80%;
+    height: 130px;
 }
 
 #guerreiroStats {
     text-align: center;
-    padding-top: 20px;
+    padding: 2% 0% 0% 0%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
-    height: 40px;
+    width: 85%;
+    height: 30px;
 }
 
 #magoBarra {
@@ -61,39 +61,39 @@
     left: 50%;
     transform: translate(-50%);
     margin: 0px 0px 0px 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #mago {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 75%;
     height: 50px;
 }
 
 #caracteristicaMago {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 2% 2% 0% 2%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
-    height: 100px;
+    width: 80%;
+    height: 130px;
 }
 
 #magoStats {
     text-align: center;
-    padding-top: 20px;
+    padding: 2% 0% 0% 0%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
-    height: 40px;
+    width: 85%;
+    height: 30px;
 }
 
 #arqueiroBarra {
@@ -102,39 +102,39 @@
     flex-direction: column;
     right: 5%;
     margin: 0 0 0 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #arqueiro {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 75%;
     height: 50px;
 }
 
 #caracteristicaArqueiro {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 2% 2% 0% 2%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
-    height: 100px;
+    width: 80%;
+    height: 130px;
 }
 
 #arqueiroStats {
     text-align: center;
-    padding-top: 20px;
+    padding: 2% 0% 0% 0%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 300px;
-    height: 40px;
+    width: 85%;
+    height: 30px;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -143,7 +143,7 @@
 
 #mensagemArma {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -152,7 +152,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding: 0 2% 0 2%;
 }
 
 #arma1Barra {
@@ -161,39 +161,39 @@
     flex-direction: column;
     left: 5%;
     margin: 0 0 0 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #arma1 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 78%;
     height: 50px;
 }
 
 #caracteristicaArma1 {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 1% 1% 0% 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 85%;
     height: 100px;
 }
 
 #statsArma1 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 86%;
+    height: 25px;
 }
 
 #arma2Barra {
@@ -203,16 +203,16 @@
     left: 50%;
     transform: translate(-50%);
     margin: 0px 0px 0px 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #arma2 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 80%;
     height: 50px;
 }
 
@@ -223,19 +223,19 @@
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 81%;
     height: 100px;
 }
 
 #statsArma2 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 86%;
+    height: 25px;
 }
 
 #arma3Barra {
@@ -244,16 +244,16 @@
     flex-direction: column;
     right: 5%;
     margin: 0 0 0 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #arma3 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 79%;
     height: 50px;
 }
 
@@ -264,19 +264,19 @@
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 80%;
     height: 100px;
 }
 
 #statsArma3 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 85%;
+    height: 25px;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -284,7 +284,7 @@
 /*----------------------------------------SELEÇÃO DE ARMADURA----------------------------------------*/
 #mensagemArmadura {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2%;
     font-size: 25pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -293,48 +293,47 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding: 0 2% 0 2%;
 }
 
 #armadura1Barra {
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 5%;
     margin: 0 0 0 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #armadura1 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 79%;
     height: 50px;
 }
 
 #caracteristicaArmadura1 {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 1% 1% 0px 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 80%;
     height: 100px;
 }
 
 #statsArmadura1 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 85%;
+    height: 25px;
 }
 
 #armadura2Barra {
@@ -343,40 +342,40 @@
     flex-direction: column;
     left: 50%;
     transform: translate(-50%);
-    margin: 0px 0px 0px 0px;
-    width: 300px;
+    margin: 0 0 0 0px;
+    width: 30%;
 }
 
 #armadura2 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 79%;
     height: 50px;
 }
 
 #caracteristicaArmadura2 {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 1% 1% 0px 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 80%;
     height: 100px;
 }
 
 #statsArmadura2 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 85%;
+    height: 25px;
 }
 
 #armadura3Barra {
@@ -385,39 +384,39 @@
     flex-direction: column;
     right: 5%;
     margin: 0 0 0 0px;
-    width: 300px;
+    width: 30%;
 }
 
 #armadura3 {
-    margin: 50px 0 0 50px;
+    margin: 5% 0 0 5%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 25pt;
-    width: 200px;
+    width: 79%;
     height: 50px;
 }
 
 #caracteristicaArmadura3 {
     text-align: justify;
-    padding: 10px 10px 0px 10px;
+    padding: 1% 1% 0px 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 12pt;
-    width: 280px;
+    width: 80%;
     height: 100px;
 }
 
 #statsArmadura3 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
     background-color: black;
     color: orangered;
     border: solid 3px gray;
     font-size: 11pt;
-    width: 300px;
-    height: 30px;
+    width: 85%;
+    height: 25px;
 }
 
 /*----------------------------------------------------------------------------------------------------*/

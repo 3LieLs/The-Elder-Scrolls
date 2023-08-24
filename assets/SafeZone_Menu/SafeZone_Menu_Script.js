@@ -1,5 +1,5 @@
 /*----------------------------------------VARIÁVEIS----------------------------------------*/
-var menuAbertoFechado = false
+var menuAbertoFechado = false, safeZone = false
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------DISPLAY----------------------------------------*/
@@ -25,7 +25,18 @@ var menuDefesaVal = window.document.querySelector(`p#menuDefesa`)
 var menuEnergiaRecuperacaoVal = window.document.querySelector(`p#menuEnergiaRecuperacao`)
 var menuManaRecuperacaoVal = window.document.querySelector(`p#menuManaRecuperacao`)
 
+var menuBotaoVal = window.document.querySelector(`input#botaoMenu`)
+document.addEventListener(`keypress`, menuAtalho)
+menuBotaoVal.addEventListener('click', menuDisplay)
 
+function menuAtalho(atalho) {
+    if (safeZone == true) {
+        if (atalho.key == 'b') {
+            console.log("Menu aberto");
+            menuBotaoVal.click()
+        }
+    }
+}
 
 function menuDisplay() {
     if (menuAbertoFechado == false) {
@@ -74,6 +85,7 @@ botaoGolemVal.addEventListener('mouseout', botaoGolemOut)
 function botaoGolemClick() {
     faseGolem = true
     mainHudDisplay = true
+    safeZone = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseGolem.style.display = 'contents'
@@ -100,6 +112,7 @@ botaoGoblinVal.addEventListener('mouseout', botaoGoblinOut)
 function botaoGoblinClick() {
     faseGoblin = true
     mainHudDisplay = true
+    safeZone = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseGoblin.style.display = 'contents'
@@ -126,6 +139,7 @@ botaoDragaoVal.addEventListener('mouseout', botaoDragaoOut)
 function botaoDragaoClick() {
     faseDragao = true
     mainHudDisplay = true
+    safeZone = true
     mainSafeZone.style.display = 'none'
     mainHud.style.display = 'contents'
     mainFaseDragao.style.display = 'contents'
