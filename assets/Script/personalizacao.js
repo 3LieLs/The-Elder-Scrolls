@@ -1,37 +1,4 @@
-/*----------------------------------------VARIÁVEIS----------------------------------------*/
-var nomeUsuarioVal, generoVal
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*----------------------------------------DISPLAY----------------------------------------*/
-inicio.style.display = 'contents', selecao.style.display = 'none', usuario.style.display = 'none' 
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*----------------------------------------INICIO----------------------------------------*/
-var botaoInicioVal = window.document.querySelector('input#botaoInicio')
-botaoInicioVal.addEventListener('click', botaoInicioClick)
-botaoInicioVal.addEventListener('mouseover', botaoInicioHover) //Serve para deixar o html mais limpinho
-botaoInicioVal.addEventListener('mouseout', botaoInicioOut)
-
-function botaoInicioClick() {
-    inicio.style.display = 'none'
-    selecao.style.display = 'contents'
-}
-function botaoInicioHover() {
-    botaoInicioVal.style.cursor = 'pointer'
-    botaoInicioVal.style.animation = 'botaoAnimacao 2s 0ms infinite running'//começa a animação
-    botaoInicioVal.style.background = 'gray'
-}
-function botaoInicioOut() {
-    botaoInicioVal.style.background = 'black'
-    botaoInicioVal.style.transform = 'scale(1.0)'
-    botaoInicioVal.style.animation = 'paused'//pausa a animação
-}
-//animation: name duration timing-function delay iteration-count direction fill-mode;
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
 /*----------------------------------------SELEÇÃO DE GÊNERO----------------------------------------*/
-
 var botaoSelecaoVal_M = window.document.querySelector('input#botaoSelecao_M')
 botaoSelecaoVal_M.addEventListener('click', botaoSelecaoClick_M)
 botaoSelecaoVal_M.addEventListener('mouseover', botaoSelecaoHover_M) //Serve para deixar o html mais limpinho
@@ -72,7 +39,6 @@ function botaoSelecaoOut_F() {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------SELEÇÃO DE NOME----------------------------------------*/
-
 var enviarUsuarioVal = window.document.querySelector('input#enviarUsuario')
 enviarUsuarioVal.addEventListener('click', enviarUsuarioClick)
 enviarUsuarioVal.addEventListener('mouseover', enviarUsuarioHover) //Serve para deixar o html mais limpinho
@@ -82,6 +48,7 @@ enviarUsuarioVal.addEventListener('mouseout', enviarUsuarioOut)
 function enviarUsuarioClick() {
     usuario.style.display = 'none'
     classe.style.display = 'contents'
+    classeDisplay = true
 }
 function enviarUsuarioHover() {
     enviarUsuarioVal.style.cursor = 'pointer'

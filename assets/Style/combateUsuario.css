@@ -1,0 +1,100 @@
+#acao {
+    position: absolute;
+    display:flex ;
+    flex-direction: row;
+    left: 15%;
+    bottom: 5%;
+    margin: 0px 0px 0px 0px;
+    width: 80%;
+}
+
+#ataqueBasico{
+    position: relative;
+    background-color: gray;
+    margin-right: 10px;
+    padding: 1% 1% 1% 1%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 20%;
+}
+#ataqueEspecial{
+    position: relative;
+    background-color: gray;
+    margin-right: 10px;
+    padding: 1% 1% 1% 1%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 20%;
+}
+#defesa{
+    position: relative;
+    background-color: gray;
+    margin-right: 10px;
+    padding: 1% 1% 1% 1%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 20%;
+}
+#descansar{
+    position: relative;
+    background-color: gray;
+    margin-right: 10px;
+    padding: 1% 1% 1% 1%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 20%;
+}
+#focar{
+    position: relative;
+    background-color: gray;
+    margin-right: 10px;
+    padding: 1% 1% 1% 1%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px black;
+    border-radius: 25%;
+    width: 20%;
+}
+
+@keyframes ataqueBasicoAnimacao{
+    0%{background-color: pink; bottom: 0px; left: 0px}
+    20%{background-color: rgb(253, 43, 78); bottom: 350px; left: 100px; scale: 1.5;}
+    30%{background-color: rgb(253, 43, 78); bottom: 150px; left: 50px; scale: 1.0;}
+    40%{background-color: rgb(253, 43, 78); bottom: 350px; left: 100px; scale: 1.5;}
+    50%{background-color: rgb(253, 43, 78); bottom: 150px; left: 50px; scale: 1.0;}
+    60%{background-color: rgb(253, 43, 78); bottom: 350px; left: 100px; scale: 1.5;}
+    70%{background-color: pink;}
+    100%{background-color: gray; bottom: 0px; left: 0px}
+}
+
+@keyframes ataqueEspecialAnimacao{
+    0%{background-color: purple; bottom: 0px; left: 0px}
+    25%{background-color: rgb(58, 0, 58); bottom: 250px; left: 50px; scale: 1.5;}
+    50%{background-color: rgb(58, 0, 58); bottom: 350px; left: 50px; scale: 2.5;}
+    75%{background-color: purple;}
+    100%{background-color: gray; bottom: 0px; left: 0px}
+}
+
+@keyframes descansarAnimacao{
+    0%{background-color: greenyellow; bottom: 0px; left: 0px}
+    25%{background-color: greenyellow; bottom: 150px; scale: 1.0;}
+    50%{background-color: green; bottom: 150px; scale: 2.5;}
+    75%{background-color: greenyellow; bottom: 0px; scale: 1.0;}
+    100%{background-color: gray; bottom: 0px; left: 0px}
+}
+
+@keyframes focarAnimacao{
+    0%{background-color: aqua; bottom: 0px; left: 0px}
+    25%{background-color: aqua; bottom: 150px; scale: 1.0;}
+    50%{background-color: blue; bottom: 150px; scale: 2.5;}
+    75%{background-color: aqua; bottom: 0px; scale: 1.0;}
+    100%{background-color: gray; bottom: 0px; left: 0px}
+}

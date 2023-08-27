@@ -1,11 +1,3 @@
-/*----------------------------------------VARIÁVEIS----------------------------------------*/
-var menuAbertoFechado = false, safeZone = false
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*----------------------------------------DISPLAY----------------------------------------*/
-mainSafeZone.style.display = 'none', mainBotaoMenu.style.display = 'none', menu.style.display = 'none'
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
 /*----------------------MENU---------------------MENU---------------------MENU---------------------MENU---------------------MENU---------------------------------------------------------------------------*/
 var menuNomeVal = window.document.querySelector(`p#menuNome`)
 var menuGeneroVal = window.document.querySelector(`p#menuGenero`)
@@ -31,7 +23,7 @@ menuBotaoVal.addEventListener('click', menuDisplay)
 
 function menuAtalho(atalho) {
     if (safeZone == true) {
-        if (atalho.key == 'b') {
+        if (atalho.key == 'g') {
             console.log("Menu aberto");
             menuBotaoVal.click()
         }
@@ -59,7 +51,7 @@ function menuDisplay() {
         menuDefesaVal.innerHTML = `Defesa: ${defesaVal}`
         menuEnergiaRecuperacaoVal.innerHTML = `E recuperação: ${energiaRecuperacaoVal}`
         menuManaRecuperacaoVal.innerHTML = `M recuperação: ${manaRecuperacaoVal}`
-        
+
         menuAbertoFechado = true
     } else {
         menu.style.display = 'none'

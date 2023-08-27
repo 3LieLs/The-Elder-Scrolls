@@ -1,18 +1,3 @@
-/*----------------------------------------DISPLAY----------------------------------------*/
-mainHud.style.display = 'none'
-mainFaseGoblin.style.display = 'none', mainFaseGolem.style.display = 'none', mainFaseDragao.style.display = 'none'
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-var legendaView = window.document.querySelector('p#mensagemLegenda')
-
-/*------------------------------Usuário HUD------------------------------*/
-var estatisticaVidaView = window.document.querySelector('p#estatisticaVida')
-var estatisticaEnergiaView = window.document.querySelector('p#estatisticaEnergia')
-var estatisticaManaView = window.document.querySelector('p#estatisticaMana')
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
 /*----------------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------GOBLIN HUD---------------------------------------------------------------------------*/
 var goblinVidaVal = 25, goblinEnergiaVal = 15
 var goblinVidaCombateVal = 25, goblinEnergiaCombateVal = 15, energiaRecuperacaoGoblin = 0
@@ -52,18 +37,6 @@ parseInt(dragaoVidaCombateVal), parseInt(dragaoManaCombateVal), parseInt(manaRec
 var dragaoVidaView = window.document.querySelector('p#dragaoVida')
 var dragaoManaView = window.document.querySelector('p#dragaoMana')
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-function usuarioCombateView() {
-    estatisticaVidaView.innerHTML = `Vida: ${vidaCombateVal}`
-    estatisticaEnergiaView.innerHTML = `Energia: ${energiaCombateVal}`
-    estatisticaManaView.innerHTML = `Mana: ${manaCombateVal}`
-}
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 function inimigoCombateView() {
@@ -111,21 +84,5 @@ function inimigoDerrotado() {
         mainSafeZone.style.display = 'contents'
         definirEstatisticaGeral()
     }
-}
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-function definirEstatisticaGeral() {
-    legendaView.innerHTML = ``
-
-    vidaCombateVal = vidaVal, energiaCombateVal = energiaVal, manaCombateVal = manaVal
-
-    goblinVidaCombateVal = goblinVidaVal, goblinEnergiaCombateVal = goblinEnergiaVal
-
-    golemVidaCombateVal = golemVidaVal, golemEnergiaCombateVal = golemEnergiaVal
-
-    dragaoVidaCombateVal = dragaoVidaVal, dragaoManaCombateVal = dragaoManaVal
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

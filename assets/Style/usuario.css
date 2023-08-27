@@ -1,0 +1,60 @@
+#mensagemLegenda{
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    width: 40%;
+    margin: 0px;
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#estatistica {
+    display:flex ;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    margin: 0px 0px 0px 0px;
+    width: 13%;
+}
+
+#estatisticaVida {
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: red;
+    color: white;
+    margin: 0px 0px 5% 0px;
+    padding: 5% 0px 5% 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+#estatisticaEnergia {
+    text-align: center;
+    font-size: 15pt;
+    background-color: green;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 5% 0px 5% 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+
+#estatisticaMana {
+    text-align: center;
+    font-size: 15pt;
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5% 0px 0px 0px;
+    padding: 5% 0px 5% 0px;
+    border: solid 3px black;
+    border-radius: 25%;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+

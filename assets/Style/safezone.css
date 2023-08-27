@@ -251,23 +251,6 @@
     border-radius: 10%;
 }
 
-/*#mensagemSafeZone {
-    position: absolute;
-    text-align: justify;
-    background-color: gray;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20pt;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 0px;
-    padding: 10px 0px 0px 10px;
-    width: 1000px;
-    height: 200px;
-    border: solid 3px black;
-    border-radius: 5%;
-}*/
-
 #botaoGoblin {
     position: absolute;
     background-color: gray;

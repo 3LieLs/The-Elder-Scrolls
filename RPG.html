@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Elder Scrolls</title>
-    <link rel="stylesheet" href="assets/Inicio_Seleção_Usuário/Inicio_Selecao_Usuario_Style.css">
-    <link rel="stylesheet" href="assets/Classe_Arma_Armadura/classe_arma_armadura_Style.css">
-    <link rel="stylesheet" href="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Style.css">
-    <link rel="stylesheet" href="assets/HUD_Combate/hudCombate_Style.css">
-    <link rel="stylesheet" href="assets/SafeZone_Menu/SafeZone_Menu_Style.css">
+    <link rel="stylesheet" href="assets/Style/inicio.css">
+    <link rel="stylesheet" href="assets/Style/personalizacao.css">
+    <link rel="stylesheet" href="assets/Style/classe.css">
+    <link rel="stylesheet" href="assets/Style/arma.css">
+    <link rel="stylesheet" href="assets/Style/armadura.css">
+    <link rel="stylesheet" href="assets/Style/safezone.css">
+    <link rel="stylesheet" href="assets/Style/usuario.css">
+    <link rel="stylesheet" href="assets/Style/inimigo.css">
+    <link rel="stylesheet" href="assets/Style/combateUsuario.css">
+    <link rel="stylesheet" href="assets/Style/combateInimigo.css">
 </head>
 
 <body>
@@ -37,6 +42,7 @@
         <!---------------------------------------------------------------------->
         <!----------------------ESCOLHA DA CLASSE---------------------->
         <div id="classe">
+            <input id="voltarClasse" type="button" value="Voltar">
             <p id="mensagemClasse"></p>
             <div id="mainClasse">
                 <div id="guerreiroBarra">
@@ -65,6 +71,7 @@
         <!---------------------------------------------------------------------->
         <!----------------------ESCOLHA DA ARMA---------------------->
         <div id="arma">
+            <input id="voltarArma" type="button" value="Voltar">
             <p id="mensagemArma"></p>
             <div id="mainArma">
                 <div id="arma1Barra">
@@ -87,6 +94,7 @@
         <!---------------------------------------------------------------------->
         <!----------------------ESCOLHA DA ARMADURA---------------------->
         <div id="armadura">
+            <input id="voltarArmadura" type="button" value="Voltar">
             <p id="mensagemArmadura"></p>
             <div id="mainArmadura">
                 <div id="armadura1Barra">
@@ -197,11 +205,17 @@
         <!---------------------------------------------------------------------->
     </main>
 
-    <script src="assets/Inicio_Seleção_Usuário/Inicio_Selecao_Usuario_Script.js"></script>
-    <script src="assets/Classe_Arma_Armadura/classe_arma_armadura_Script.js"></script>
-    <script src="assets/CombateUsuário_CombateInimigo/combateUsuario_combateInimigo_Script.js"></script>
-    <script src="assets/HUD_Combate/hudCombate_Script.js"></script>
-    <script src="assets/SafeZone_Menu/SafeZone_Menu_Script.js"></script>
+    <script src="assets/Script/variaveis_display.js"></script>
+    <script src="assets/Script/inicio.js"></script>
+    <script src="assets/Script/personalizacao.js"></script>
+    <script src="assets/Script/classe.js"></script>
+    <script src="assets/Script/arma.js"></script>
+    <script src="assets/Script/armadura.js"></script>
+    <script src="assets/Script/safezone.js"></script>
+    <script src="assets/Script/usuario.js"></script>
+    <script src="assets/Script/inimigo.js"></script>
+    <script src="assets/Script/combateUsuario.js"></script>
+    <script src="assets/Script/combateInimigo.js"></script>
 </body>
 
 </html>

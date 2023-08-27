@@ -1,0 +1,155 @@
+/*----------------------------------------SELEÇÃO DE ARMADURA----------------------------------------*/
+#voltarArmadura{
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#mensagemArmadura {
+    text-align: center;
+    padding-top: 2%;
+    font-size: 25pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#mainArmadura {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2% 0 2%;
+}
+
+#armadura1Barra {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 5%;
+    margin: 0px 0px 0px 0px;
+    width: 30%;
+}
+
+#armadura1 {
+    margin: 5% 0 0 0%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 75%;
+    height: 50px;
+}
+
+#caracteristicaArmadura1 {
+    text-align: justify;
+    padding: 1% 1% 0px 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 80%;
+    height: 100px;
+}
+
+#statsArmadura1 {
+    text-align: center;
+    padding-top: 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 85%;
+    height: 25px;
+}
+
+#armadura2Barra {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0px 0px 0px 0px;
+    width: 30%;
+}
+
+#armadura2 {
+    margin: 5% 0 0 0%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 75%;
+    height: 50px;
+}
+
+#caracteristicaArmadura2 {
+    text-align: justify;
+    padding: 1% 1% 0px 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 80%;
+    height: 100px;
+}
+
+#statsArmadura2 {
+    text-align: center;
+    padding-top: 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 85%;
+    height: 25px;
+}
+
+#armadura3Barra {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 5%;
+    margin: 0 0 0 0px;
+    width: 30%;
+}
+
+#armadura3 {
+    margin: 5% 0 0 0%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 25pt;
+    width: 75%;
+    height: 50px;
+}
+
+#caracteristicaArmadura3 {
+    text-align: justify;
+    padding: 1% 1% 0px 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 12pt;
+    width: 80%;
+    height: 100px;
+}
+
+#statsArmadura3 {
+    text-align: center;
+    padding-top: 1%;
+    background-color: black;
+    color: orangered;
+    border: solid 3px gray;
+    font-size: 11pt;
+    width: 85%;
+    height: 25px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
